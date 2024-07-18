@@ -2,14 +2,12 @@ const containerEl = document.querySelector(".container");
 const canvasEl = document.querySelector("canvas#neuro");
 const devicePixelRatio = Math.min(window.devicePixelRatio, 2);
 
-
 const pointer = {
     x: 0,
     y: 0,
     tX: 0,
     tY: 0,
 };
-
 
 let uniforms;
 const gl = initShader();
@@ -75,7 +73,7 @@ function initShader() {
         return uniforms;
     }
 
-    const vertices = new Float32Array([-1., -1., 1., -1., -1., 1., 1., 1.]);
+    const vertices = new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]);
 
     const vertexBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
@@ -95,8 +93,8 @@ function initShader() {
 function render() {
     const currentTime = performance.now();
 
-    pointer.x += (pointer.tX - pointer.x) * .5;
-    pointer.y += (pointer.tY - pointer.y) * .5;
+    pointer.x += (pointer.tX - pointer.x) * 0.5;
+    pointer.y += (pointer.tY - pointer.y) * 0.5;
 
     gl.uniform1f(uniforms.u_time, currentTime);
     gl.uniform2f(uniforms.u_pointer_position, pointer.x / window.innerWidth, 1 - pointer.y / window.innerHeight);
@@ -114,13 +112,13 @@ function resizeCanvas() {
 }
 
 function setupEvents() {
-    window.addEventListener("pointermove", e => {
+    window.addEventListener("pointermove", (e) => {
         updateMousePosition(e.clientX, e.clientY);
     });
-    window.addEventListener("touchmove", e => {
+    window.addEventListener("touchmove", (e) => {
         updateMousePosition(e.targetTouches[0].clientX, e.targetTouches[0].clientY);
     });
-    window.addEventListener("click", e => {
+    window.addEventListener("click", (e) => {
         updateMousePosition(e.clientX, e.clientY);
     });
 
