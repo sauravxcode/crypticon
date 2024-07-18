@@ -10,8 +10,9 @@
     <div class="content">
         <div class="section">
             <div>
-                Neural Noise
+                Cryptic Hunt
             </div>
+            
         </div>
         <div class="section">
             <div>
