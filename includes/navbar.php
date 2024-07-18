@@ -258,6 +258,11 @@
             color: var(--text-color);
         }
 
+        main{
+            margin-top: 100px;
+            color: #FFF;
+        }
+
         @media (max-width: 790px) {
             nav .nav-bar .sidebarOpen {
                 display: block;
