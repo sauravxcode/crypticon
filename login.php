@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title of the page -->
-    <title>Login | Agro App</title>
+    <title>Login | Cryptic Hunt</title>
 
     <!-- External CSS file for styling -->
     <link rel="stylesheet" href="css/login.css">
@@ -46,8 +46,8 @@
             <button type="submit" class="btn" name="submit">Login</button>
 
             <div class="register-link">
-                <p>Don't have an acccount?
-                    <a href="register.php">Register</a>
+                <p>Have question?
+                    <a href="#">Join Discord</a>
                 </p>
             </div>
         </form>

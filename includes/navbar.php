@@ -54,7 +54,7 @@
         }
 
         nav {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             height: 70px;
@@ -259,8 +259,27 @@
         }
 
         main{
+<<<<<<< HEAD
             margin-top: 100px;
             color: #FFF;
+=======
+            width: 100%;
+            height: 100%;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .box{
+            width: 40%;
+            height: 80%;
+        }
+
+        .box iframe{
+            width: 100%;
+            height: 100%;
+>>>>>>> f79ed4ce836ac0dd595872a259ab2a459d48f297
         }
 
         @media (max-width: 790px) {
@@ -382,7 +401,10 @@
 
     <!-- Main content -->
     <main>
-        <p>Main content area.</p>
+        <div class="box"></div>
+        <div class="box">
+            <iframe src="http://localhost:3000/includes/leaderboard2.php" frameborder="0"></iframe>
+        </div>
     </main>
 
     <footer>
