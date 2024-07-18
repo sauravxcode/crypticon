@@ -43,7 +43,7 @@
 /* Template Backgrounds Start */
 /* ------------------------------------------------*/
 .media-image-1 {
-  background-image: url("https://dummyimage.com/960x1440/636363/ffffff");
+  background-image: url("../img/image2.webp");
 }
 
 .media-image-2 {
@@ -75,19 +75,19 @@
 }
 
 .menu-image-1 {
-  background-image: url("https://dummyimage.com/960x1440/636363/ffffff");
+  background-image: url("../img/image1.webp");
 }
 
 .media-image-about {
-  background-image: url("https://dummyimage.com/960x1440/636363/ffffff");
+  background-image: url("../img/about2.webp");
 }
 
 .media-image-portfolio {
-  background-image: url("https://dummyimage.com/960x1440/636363/ffffff");
+  background-image: url("../img/leaderboard.webp");
 }
 
 .media-image-contact {
-  background-image: url("https://dummyimage.com/960x1440/636363/ffffff");
+  background-image: url("../img/image2.webp");
 }
 
 .showreel-image-1 {
