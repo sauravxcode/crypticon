@@ -259,27 +259,8 @@
         }
 
         main{
-<<<<<<< HEAD
             margin-top: 100px;
             color: #FFF;
-=======
-            width: 100%;
-            height: 100%;
-            color: #FFF;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-        }
-
-        .box{
-            width: 40%;
-            height: 80%;
-        }
-
-        .box iframe{
-            width: 100%;
-            height: 100%;
->>>>>>> f79ed4ce836ac0dd595872a259ab2a459d48f297
         }
 
         @media (max-width: 790px) {
