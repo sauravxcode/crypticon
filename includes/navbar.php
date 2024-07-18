@@ -54,7 +54,7 @@
         }
 
         nav {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             height: 70px;
@@ -258,6 +258,25 @@
             color: var(--text-color);
         }
 
+        main{
+            width: 100%;
+            height: 100%;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .box{
+            width: 40%;
+            height: 80%;
+        }
+
+        .box iframe{
+            width: 100%;
+            height: 100%;
+        }
+
         @media (max-width: 790px) {
             nav .nav-bar .sidebarOpen {
                 display: block;
@@ -377,7 +396,10 @@
 
     <!-- Main content -->
     <main>
-        <p>Main content area.</p>
+        <div class="box"></div>
+        <div class="box">
+            <iframe src="http://localhost:3000/includes/leaderboard2.php" frameborder="0"></iframe>
+        </div>
     </main>
 
     <footer>
