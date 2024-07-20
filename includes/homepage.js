@@ -1,3 +1,4 @@
+document.getElementById("gameplay").addEventListener("click", () => {window.location.href="game.php"});
 const containerEl = document.querySelector(".container");
 const canvasEl = document.querySelector("canvas#neuro");
 const devicePixelRatio = Math.min(window.devicePixelRatio, 2);

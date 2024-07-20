@@ -393,7 +393,7 @@
             <img src="https://via.placeholder.com/100x40" alt="Logo" />
         </div>
         <div class="footer-copyright">
-            &copy; 2024 Cryptic Hunt
+            &copy; 2024 Crypticon
         </div>
     </footer>
 

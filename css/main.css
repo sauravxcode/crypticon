@@ -1898,7 +1898,7 @@ a {
 }
 .btn-bottom .caption {
   margin-left: 2rem;
-  font: normal 600 1.4rem/1.2 "Poppins", sans-serif;
+  font: normal 600 2rem/1.2 "Poppins", sans-serif;
   color: #ffffff;
   -webkit-transition: colors 0.3s;
   -o-transition: colors 0.3s;
@@ -3946,6 +3946,13 @@ form .inputs-description {
   background-color: #f987d6;
 }
 
+
+/* ------------------------------------------------*/
+/* LOGIN BUTTON Custom Styles */
+/* ------------------------------------------------*/
+
+
 /* ------------------------------------------------*/
 /* Gallery Custom Styles End */
 /* ------------------------------------------------*/
+

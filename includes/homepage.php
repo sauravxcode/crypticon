@@ -14,8 +14,7 @@
             <div>
                 Crypticon 2024
             </div>
-            <button> LET'S PLAY 🡥
-</button>
+            <button id="gameplay"> LET'S PLAY 🡥</button>
         </div>
     </div>
 

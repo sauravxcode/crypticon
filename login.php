@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title of the page -->
-    <title>Login | Cryptic Hunt</title>
+    <title>Login | Crypticon</title>
 
     <!-- External CSS file for styling -->
     <link rel="stylesheet" href="css/login.css">
