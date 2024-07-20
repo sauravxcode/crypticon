@@ -5,26 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neural Noise</title>
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
+    <button class="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> LOGOUT</button>
     <div class="content">
         <div class="section">
             <div>
                 Crypticon 2024
             </div>
-            
-        </div>
-        <div class="section">
-            <div>
-                GLSL shader based on <a href="https://x.com/zozuar/" target="_blank">@zozuar</a> <a href="https://x.com/zozuar/status/1625182758745128981/" target="_blank">artwork</a>
-            </div>
-        </div>
-        <div class="section">
-            <div>
-                <a href="https://linkedin.com/in/ksenia-kondrashova/" target="_blank">linkedIn</a>
-                <a href="https://codepen.io/ksenia-k" target="_blank">codepen</a>
-                <a href="https://x.com/uuuuuulala" target="_top">X (twitter)</a>
-            </div>
+            <button> LET'S PLAY 🡥
+</button>
         </div>
     </div>
 
