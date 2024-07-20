@@ -442,7 +442,7 @@
 
                             <!-- Section Container - Gallery Start -->
                             <div class="inner__container">
-                                <iframe src="http://localhost:3000/includes/leaderboard2.php" frameborder="0"></iframe>
+                                <iframe src="http://localhost:3000/includes/leaderboard.php" frameborder="0"></iframe>
                             </div>
                             <!-- Section Container - Gallery End -->
                         </div>
