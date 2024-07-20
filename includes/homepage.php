@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
-    <button class="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> LOGOUT</button>
+    <button class="logout-btn" id="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> LOGOUT</button>
     <div class="content">
         <div class="section">
             <div>

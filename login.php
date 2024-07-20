@@ -29,7 +29,7 @@
            <button type="submit" id="login-game">LOGIN 🡥</button>
            <div class="link">
               Have a Question?
-              <a href="https://www.google.com">Join Discord</a>
+              <a href="#">Join Discord</a>
            </div>
         </form>
      </div>
@@ -39,7 +39,7 @@
 <script>
 document.getElementById("login-form").addEventListener("submit", (event) => {
     event.preventDefault();
-    window.location.href = "../includes/game.php";
+    window.location.href = "../includes/homepage.php";
 });
 </script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

@@ -162,7 +162,7 @@
                                     <div class="row g-0">
                                         <div class="col-12">
                                             <p class="copyright">
-                                                By <a href="https://1.envato.market/EKA9WD" target="_blank">Mix Design</a>, 2024
+                                                By <a href="https://github.com/chinxcode" target="_blank">Sachin</a> & <a href="https://github.com/sauravxcode" target="_blank">Saurav</a>
                                             </p>
                                         </div>
                                     </div>
@@ -301,33 +301,18 @@
                         <div class="col-12 socials-mobile">
                             <ul>
                                 <li>
-                                    <a href="https://www.facebook.com/" target="_blank">
-                                        <i class="fa-brands fa-facebook"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank">
+                                    <a href="https://www.instagram.com/crypticon_india" target="_blank">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.pinterest.com/" target="_blank">
-                                        <i class="fa-brands fa-pinterest"></i>
+                                    <a href="https://www.linkedin.com/company/elitegenesis-innovations/" target="_blank">
+                                        <i class="fa-brands fa-linkedin"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.behance.net/" target="_blank">
-                                        <i class="fa-brands fa-behance"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/" target="_blank">
-                                        <i class="fa-brands fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://dribbble.com/" target="_blank">
-                                        <i class="fa-brands fa-dribbble"></i>
+                                    <a href="https://mapsashokvihar.net/" target="_blank">
+                                        <i class="fa-solid fa-graduation-cap"></i>
                                     </a>
                                 </li>
                             </ul>
