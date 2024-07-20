@@ -10,7 +10,7 @@
     <div class="content">
         <div class="section">
             <div>
-                Cryptic Hunt
+                Crypticon 2024
             </div>
             
         </div>

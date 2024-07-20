@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
-
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     background-color: #151912;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .content {
     width: 100vw;
-    font-family: 'Space Grotesk', serif;
+    font-family: "Space Grotesk", serif;
 }
 
 .section {
@@ -20,7 +20,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFF6F7;
+    color: #fff6f7;
     text-align: center;
 }
 
@@ -70,7 +70,7 @@ body, html {
 }
 
 .section:nth-child(3) a {
-    padding: 0 .3em;
+    padding: 0 0.3em;
 }
 
 canvas#neuro {
@@ -79,7 +79,7 @@ canvas#neuro {
     left: 0;
     width: 100%;
     pointer-events: none;
-    opacity: .95;
+    opacity: 0.95;
 }
 
 a {
@@ -99,5 +99,3 @@ a:hover {
 a:active {
     color: rgb(160, 255, 255);
 }
-
-
