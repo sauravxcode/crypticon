@@ -11,15 +11,17 @@ html {
 }
 
 .logout-btn{
+    font-size: 12px;
     position: absolute;
     top: 5x;
     right: 50px;
     padding: 0.7em 1.5em;
 }
+
 button {
     --green: #1BFD9C;
     margin-top: 50px;
-    font-size: 18px;
+    font-size: 20px;
     padding: 0.7em 2.7em;
     letter-spacing: 0.06em;
     position: relative;
@@ -74,20 +76,27 @@ button {
 }
 
 .section:nth-child(1) {
-    font-size: 20vh;
+    font-size: 18vh;
     font-weight: 600;
     letter-spacing: -12px;
 }
 
 @media (max-width: 600px) {
     .section:nth-child(1) {
-        font-size: 25vw;
+        font-size: 15vh;
+    }
+
+    .logout-btn{
+        margin-top: 20px;
+        top: 5px;
+        right: 20px;
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 425px) {
     .section:nth-child(1) {
-        font-size: 30px;
+        font-size: 8vh;
+        letter-spacing: -6px;
     }
 }
 
