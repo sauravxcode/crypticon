@@ -1,6 +1,7 @@
 body {
     font-family: "Inter Tight", sans-serif;
-    background-color: #f8f9fa;
+    background-color: #0A0E17;
+    color: #EAEAEA; /* Light text color for better readability */
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,12 +15,14 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
+    background-color: transparent; /* Slightly lighter background for the container */
+    border-radius: 10px;
 }
 
 .page-title {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: #EAEAEA;
     text-align: center;
 }
 
@@ -32,16 +35,16 @@ body {
 .form-section {
     flex: 1;
     min-width: 300px;
-    background-color: #ffffff;
+    background-color: #13171F; /* Slightly lighter dark color for sections */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .section-title {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #333;
+    color: #eaeaeae6;
 }
 
 .form-group {
@@ -52,6 +55,7 @@ body {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color: #EAEAEA;
 }
 
 .form-group input,
@@ -60,7 +64,9 @@ body {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ced4da;
+    background-color: #1C212C; /* Maintained dark input field color */
+    color: #7A8395; /* Light text color inside inputs */
+    border: 1px solid #7a83951e;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -77,6 +83,7 @@ body {
     display: block;
     margin-bottom: 10px;
     cursor: pointer;
+    color: #1E90FF; /* Bright color for file upload label to stand out */
 }
 
 img#preview {
@@ -88,7 +95,7 @@ img#preview {
 }
 
 .btn {
-    background-color: #007bff;
+    background-color: #0172AD;
     color: #fff;
     border: none;
     padding: 10px 20px;

@@ -10,19 +10,7 @@
             font-family: 'Space Grotesk', sans-serif;
             transition: all 0.4s ease;
         }
-
-        /* ===== Colours ===== */
-        :root {
-            --body-color: #E4E9F7;
-            --nav-color: #5251CE;
-            --side-nav: #010718;
-            --text-color: #FFF;
-            --search-bar: #F2F2F2;
-            --search-text: #010718;
-            --footer-color: #5251CE; /* Purple background for light mode */
-            --footer-border-color: #4a4a8b; /* Slightly darker purple for the border in light mode */
-        }
-
+        
         body {
             height: 100vh;
             background-color: var(--body-color);
