@@ -9,7 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="dashboard.css">
 
-    <title>Responsive Navigation Menu Bar</title>
+    <title>Game Arena</title>
 </head>
 <body>
     <nav>
@@ -61,18 +61,18 @@
     </nav>
 
     <!-- Main content -->
-    <main>
+    <!-- <main>
         <p>Main content area.</p>
-    </main>
+    </main> -->
 
-    <footer>
+    <!-- <footer>
         <div class="footer-logo">
             <img src="https://via.placeholder.com/100x40" alt="Logo" />
         </div>
         <div class="footer-copyright">
             &copy; Crpyticon 2024
         </div>
-    </footer>
+    </footer> -->
 
     <script>
         const body = document.querySelector("body"),

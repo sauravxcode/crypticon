@@ -27,7 +27,7 @@
 </div>
         <!-- Loader End -->
 <div id="container">
-  <canvas id="canvas"></canvas>
+  <!-- <canvas id="canvas"></canvas> -->
   <div class="login-container">
     <div class="login-form">
         <div class="text">
@@ -56,6 +56,14 @@
 document.getElementById("login-form").addEventListener("submit", (event) => {
     event.preventDefault();
     window.location.href = "../includes/homepage.php";
+});
+
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loaded");
+    setTimeout(function () {
+        loader.style.display = "none";
+    }, 1000);
 });
 </script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

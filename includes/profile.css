@@ -111,3 +111,9 @@ img#preview {
 .btn:hover {
     background-color: #0056b3;
 }
+
+@media (max-width: 730px) {
+    .container{
+        margin-top: 550px;
+    }
+}
