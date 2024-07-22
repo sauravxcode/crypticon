@@ -13,13 +13,12 @@
     <link rel="stylesheet" href="leaderboard.css">
   </head>
   <body>
-  <?php include ("dashboard.php"); ?>
+  <?php
+   include ("header.php"); 
+   ?>
     <main>
       <div id="header">
         <h1>Ranking</h1>
-        <!-- <button class="share">
-          <i class="ph ph-share-network"></i>
-        </button> -->
       </div>
       <div id="leaderboard">
         <div class="ribbon"></div>
@@ -53,8 +52,6 @@
           </tr>
         </table>
         <div id="buttons">
-          <!-- <button class="exit">Exit</button>
-          <button class="continue">Continue</button> -->
         </div>
       </div>
     </main>

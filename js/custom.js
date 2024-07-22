@@ -35,7 +35,6 @@ $(window).on("load", function () {
     // --------------------------------------------- //
     // Loader Start
     // --------------------------------------------- //
-    $(".loader__circle").addClass("fade");
 
     setTimeout(function () {
         $(".loader").addClass("loaded");

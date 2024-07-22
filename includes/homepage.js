@@ -1,3 +1,11 @@
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    setTimeout(function () {
+        loader.classList.add("loaded");
+        loader.style.display = "none";
+    }, 1000);
+});
+
 document.getElementById("gameplay").addEventListener("click", () => {
     window.location.href = "game.php";
 });

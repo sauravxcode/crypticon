@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neural Noise</title>
+    <title>Let's play | Crypticon 2024</title>
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="../css/loaders/loader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
+     <!-- Loader Start -->
+        <div class="loader">
+    <div class="loader__container">
+        <div class="pyramid-loader">
+            <div class="wrapper">
+                <span class="side side1"></span>
+                <span class="side side2"></span>
+                <span class="side side3"></span>
+                <span class="side side4"></span>
+                <span class="shadow"></span>
+            </div>  
+        </div>
+    </div>
+</div>
+        <!-- Loader End -->
     <button class="logout-btn" id="logout-btn"><i class="fa-solid fa-arrow-right-from-bracket"></i> LOGOUT</button>
     <div class="content">
         <div class="section">
