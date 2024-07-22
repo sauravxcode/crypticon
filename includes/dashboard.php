@@ -7,19 +7,19 @@
 
     <!-- ===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="dashboard.css">
 
     <title>Responsive Navigation Menu Bar</title>
-    <link rel="stylesheet" href="ggame.css">
 </head>
 <body>
-    <header>
+    <nav>
         <div class="nav-bar">
             <i class='bx bx-menu sidebarOpen'></i>
-            <span class="logo navLogo"><a href="#">CrypticHunt</a></span>
+            <span class="logo navLogo"><a href="#">Crpyticon</a></span>
 
             <div class="menu">
                 <div class="logo-toggle">
-                    <span class="logo"><a href="#">CrypticHunt</a></span>
+                    <span class="logo"><a href="#">Crpyticon</a></span>
                     <i class='bx bx-x siderbarClose'></i>
                 </div>
 
@@ -32,50 +32,45 @@
                 </ul>
             </div>
 
-            <div class="darkLight-searchBox">
+    
+            <div class="darkLight-searchBox searchToggle ">
+                <i class='bx bxs-user-circle'></i>
+                </div>
+
+
+            <!-- <div class="darkLight-searchBox">
                 <div class="dark-light">
                     <i class='bx bx-moon moon'></i>
                     <i class='bx bx-sun sun'></i>
-                </div>
+                </div> -->
 
-                    <div class="profile">
-                    <i class="fa-solid fa-circle-user"></i>
+                
+                <!-- <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
                     </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div> -->
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Main content -->
     <main>
-            <div class="game-area">
-                <div class="question-box">
-                    <!-- Question content will be loaded here -->
-                    <?php
-                    // Example question display
-                    echo "<h2>Question:</h2>";
-                    echo "<p>" . htmlspecialchars($currentQuestion ?? 'Loading question...') . "</p>";
-                    // If there's an image, you can display it here
-                    if (isset($questionImage)) {
-                        echo "<img src='" . htmlspecialchars($questionImage) . "' alt='Question Image'>";
-                    }
-                    ?>
-                </div>
-                <div class="answer-input">
-                    <input type="text" id="answer" placeholder="Your answer">
-                    <button onclick="submitAnswer()">Submit</button>
-                </div>
-            </div>
-            <div class="leaderboard">
-                <iframe src="leaderboard.php" frameborder="0"></iframe>
-            </div>
-        </main>
+        <p>Main content area.</p>
+    </main>
 
     <footer>
         <div class="footer-logo">
             <img src="https://via.placeholder.com/100x40" alt="Logo" />
         </div>
         <div class="footer-copyright">
-            &copy; 2024 Crypticon
+            &copy; Crpyticon 2024
         </div>
     </footer>
 
@@ -92,23 +87,18 @@
             body.classList.add("dark");
         }
 
-        // JavaScript to toggle dark and light mode
-        modeToggle.addEventListener("click", () => {
-            modeToggle.classList.toggle("active");
-            body.classList.toggle("dark");
+        // // JavaScript to toggle dark and light mode
+        // modeToggle.addEventListener("click", () => {
+        //     modeToggle.classList.toggle("active");
+        //     body.classList.toggle("dark");
 
-            // JavaScript to keep user-selected mode even after page refresh or file reopen
-            if (!body.classList.contains("dark")) {
-                localStorage.setItem("mode", "light-mode");
-            } else {
-                localStorage.setItem("mode", "dark-mode");
-            }
-        });
-
-        // JavaScript to toggle search box
-        searchToggle.addEventListener("click", () => {
-            searchToggle.classList.toggle("active");
-        });
+        //     // JavaScript to keep user-selected mode even after page refresh or file reopen
+        //     if (!body.classList.contains("dark")) {
+        //         localStorage.setItem("mode", "light-mode");
+        //     } else {
+        //         localStorage.setItem("mode", "dark-mode");
+        //     }
+        // });
 
         // JavaScript to toggle sidebar
         sidebarOpen.addEventListener("click", () => {
