@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
 :root {
     --bg-color: #0a0e17;
     --primary-color: #1a1f2e;
@@ -11,16 +13,17 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: "Orbitron", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
 
 .container {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     height: 100%;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -29,8 +32,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 5rem;
     background-color: var(--primary-color);
+}
+
+header h1 {
+    text-transform: uppercase;
 }
 
 .profile-dropdown {
@@ -78,13 +85,13 @@ button {
 
 main {
     display: flex;
-    height: 90%;
+    height: 75%;
 }
 
 .game-area {
     width: 60%;
     padding: 20px;
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
 }
@@ -120,7 +127,7 @@ main {
 
 .leaderboard {
     width: 40%;
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     padding: 20px;
 }
 
@@ -135,7 +142,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 5rem;
     background-color: var(--primary-color);
 }
 
@@ -154,3 +161,5 @@ footer {
         width: inherit;
     }
 }
+
+/* leaderboard */

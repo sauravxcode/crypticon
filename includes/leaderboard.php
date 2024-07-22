@@ -50,16 +50,6 @@
             <td class="name">Johnny Suh</td>
             <td class="points">258.208</td>
           </tr>
-          <tr>
-            <td class="number">6</td>
-            <td class="name">Sachin Shah</td>
-            <td class="points">258.208</td>
-          </tr>
-          <tr>
-            <td class="number">7</td>
-            <td class="name">Saurav Cha</td>
-            <td class="points">258.208</td>
-          </tr>
         </table>
         <div id="buttons">
           <!-- <button class="exit">Exit</button>

@@ -53,12 +53,18 @@
     <body>
         <!-- Loader Start -->
         <div class="loader">
-            <div class="loader__container">
-                <div class="loader__circle">
-                    <img src="img/logo-loader.svg" alt="Marvio Template Loader Logo" />
-                </div>
-            </div>
+    <div class="loader__container">
+        <div class="pyramid-loader">
+            <div class="wrapper">
+                <span class="side side1"></span>
+                <span class="side side2"></span>
+                <span class="side side3"></span>
+                <span class="side side4"></span>
+                <span class="shadow"></span>
+            </div>  
         </div>
+    </div>
+</div>
         <!-- Loader End -->
 
         <!-- Menu Start -->

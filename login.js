@@ -1,3 +1,11 @@
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loaded");
+    setTimeout(function () {
+        loader.style.display = "none";
+    }, 1000);
+});
+
 var PI2 = Math.PI * 2;
 var HALF_PI = Math.PI / 2;
 

@@ -8,8 +8,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="css/loaders/loader.css">
 </head>
 <body>   
+   <!-- Loader Start -->
+        <div class="loader">
+    <div class="loader__container">
+        <div class="pyramid-loader">
+            <div class="wrapper">
+                <span class="side side1"></span>
+                <span class="side side2"></span>
+                <span class="side side3"></span>
+                <span class="side side4"></span>
+                <span class="shadow"></span>
+            </div>  
+        </div>
+    </div>
+</div>
+        <!-- Loader End -->
 <div id="container">
   <canvas id="canvas"></canvas>
   <div class="login-container">

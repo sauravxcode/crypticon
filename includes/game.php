@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming Interface</title>
     <link rel="stylesheet" href="game.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -15,7 +14,7 @@
                 <button class="profile-button">Profile</button>
                 <div class="dropdown-content">
                     <a href="leaderboard.php">Leaderboard</a>
-                    <a href="#profile">My Profile</a>
+                    <a href="profile.php">My Profile</a>
                     <a href="../index.php">Logout</a>
                 </div>
             </div>
