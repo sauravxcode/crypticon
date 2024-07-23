@@ -31,7 +31,7 @@ main {
     justify-content: space-around;
 }
 
-tbody{
+tbody {
     display: flex;
     margin-right: 10px;
     flex-direction: column;
@@ -68,20 +68,20 @@ tbody{
     overflow-y: auto;
 }
 
-.question-box h2{
+.question-box h2 {
     font-size: 3rem;
 }
 
-.question-box p{
-    font-size: 1.2rem;
+.question-box p {
+    font-size: 2rem;
 }
 
-.answer-input {
+#answer-form {
     display: flex;
     gap: 0.5rem;
 }
 
-.answer-input input {
+#answer-form input {
     width: 100%;
     font-size: 1.5rem;
     flex-grow: 1;
@@ -92,8 +92,7 @@ tbody{
     color: var(--text-color);
 }
 
-
-.answer-input button {
+#answer-form button {
     font-size: 1.5rem;
     padding: 0.75rem 1.5rem;
     background-color: var(--accent-color);
@@ -104,7 +103,7 @@ tbody{
     transition: background-color 0.3s ease;
 }
 
-.answer-input button:hover {
+#answer-form button:hover {
     background-color: #5b6eae;
 }
 
@@ -133,11 +132,27 @@ tbody{
     display: flex;
     background-color: var(--nav-color);
     border-radius: 5px;
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .leaderboard tr:hover {
     transform: translateY(-2px);
+}
+
+.leaderboard tr.moving-up {
+    animation: moveUp 0.5s ease;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .leaderboard td {
@@ -221,8 +236,8 @@ tbody{
 }
 
 @media (max-width: 1024px) {
-    main{
-        gap: 10px
+    main {
+        gap: 10px;
     }
 
     .game-area {
@@ -240,29 +255,25 @@ tbody{
         flex: none;
     }
 
-    .answer-input{
+    #answer-form {
         margin-bottom: 20px;
     }
 
-    .timer{
+    .timer {
         margin-bottom: 20px;
     }
 
-    #countdown{
+    #countdown {
         font-size: 4rem;
     }
-
 }
 
 @media (max-width: 425px) {
-    .answer-input input {
+    #answer-form input {
         font-size: 0.9rem;
     }
 
-    .answer-input button {
+    #answer-form button {
         font-size: 0.9rem;
     }
-
-    
-    
 }

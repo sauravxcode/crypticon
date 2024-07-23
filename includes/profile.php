@@ -3,7 +3,7 @@ require_once 'config.php';
 session_start();
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit();
 }
 
@@ -43,51 +43,56 @@ $team_members = mysqli_fetch_all($team_members_result, MYSQLI_ASSOC);
         <div class="form-container">
             <!-- Private Info -->
             <div class="form-section">
-                <h2 class="section-title">Private Info</h2>
-                <form>
-                    <div class="form-group">
-                        <input type="text" id="inputUserID" value="<?php echo $user_data['UserID']; ?>" placeholder="UserID" readonly>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="inputSchoolName" value="<?php echo $user_data['SchoolName']; ?>" placeholder="School Name" readonly>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="inputEmail" value="<?php echo $user_data['Email']; ?>" placeholder="Email" readonly>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="inputAddress" value="<?php echo $user_data['SchoolAddress']; ?>" placeholder="Address" readonly>
-                    </div>
-                    <div class="form-group">
-                        <h2 class="section-title">Member Info</h2>
-                        <?php 
-                            for ($i = 0; $i < 4; $i++) {
-                                if (isset($team_members[$i])) {
-                                    $member = $team_members[$i];
-                                    $value = $member['MemberName'] . ' - ' . $member['MemberRole'];
-                                } else {
-                                    $value = '';
-                                }
-                                echo '<div class="form-group"><input type="text" value="' . $value . '" placeholder="Member ' . ($i + 1) . '" readonly> </div>';
-                            }
-                            ?>
-                    </div>
-                </form>
-            </div>
-            <!-- Public Info -->
-            <div class="form-section">
-                <h2 class="section-title">Public Info</h2>
-                <form>
-                    <div class="form-group">
-                        <input type="text" id="inputUsername" value="<?php echo $user_data['Username']; ?>" placeholder="Username" readonly>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="inputBio" rows="4" placeholder="Team Slogan" readonly></textarea>
-                    </div>
-                    <div class="form-group image-upload">
-                        <label>Your Profile Picture</label>
-                        <img id="preview" src="<?php echo $user_data['UserProfilePicLink'] ?: 'https://bootdey.com/img/Content/avatar/avatar1.png'; ?>" alt="Profile Picture">
-                    </div>
-                </form>
+    <h2 class="section-title">Private Info</h2>
+    <form>
+        <div class="form-group">
+            <label for="inputUserID">User ID</label>
+            <input type="text" id="inputUserID" value="<?php echo $user_data['UserID']; ?>" readonly>
+        </div>
+        <div class="form-group">
+            <label for="inputSchoolName">School Name</label>
+            <input type="text" id="inputSchoolName" value="<?php echo $user_data['SchoolName']; ?>" readonly>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input type="email" id="inputEmail" value="<?php echo $user_data['Email']; ?>" readonly>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input type="text" id="inputAddress" value="<?php echo $user_data['SchoolAddress']; ?>" readonly>
+        </div>
+        <div class="form-group">
+            <h2 class="section-title">Member Info</h2>
+            <?php 
+            for ($i = 0; $i < 3; $i++) {
+                if (isset($team_members[$i])) {
+                    $member = $team_members[$i];
+                    $value = $member['MemberName'] . ' - ' . $member['MemberRole'];
+                } else {
+                    $value = '';
+                }
+                echo '<div class="form-group"> <input type="text" id="inputMember' . ($i + 1) . '" value="' . $value . '" readonly></div>';
+            }
+            ?>
+                </div>
+            </form>
+        </div>
+        <div class="form-section">
+            <h2 class="section-title">Public Info</h2>
+            <form>
+                <div class="form-group">
+                    <label for="inputUsername">Username</label>
+                    <input type="text" id="inputUsername" value="<?php echo $user_data['Username']; ?>" readonly>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="inputBio">Team Slogan</label>
+                    <textarea id="inputBio" rows="4" readonly></textarea>
+                </div> -->
+                <div class="form-group image-upload">
+                    <label for="preview">Your Profile Picture</label>
+                    <img id="preview" src="<?php echo $user_data['UserProfilePicLink'] ?: 'https://bootdey.com/img/Content/avatar/avatar1.png'; ?>" alt="Profile Picture">
+                </div>
+            </form>
             </div>
         </div>
     </div>
