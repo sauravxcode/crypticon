@@ -23,6 +23,7 @@
       <div id="leaderboard">
         <div class="ribbon"></div>
         <table>
+          <tbody> 
           <tr>
             <td class="number">1</td>
             <td class="name">Lee Taeyong</td>
@@ -50,6 +51,7 @@
             <td class="name">Johnny Suh</td>
             <td class="points">258.208</td>
           </tr>
+          </tbody>
         </table>
         <div id="buttons">
         </div>

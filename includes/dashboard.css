@@ -30,6 +30,13 @@ main {
     justify-content: space-around;
 }
 
+tbody{
+    display: flex;
+    margin-right: 10px;
+    flex-direction: column;
+    gap: 6px;
+}
+
 .game-area {
     flex: 0 0 65%;
     display: flex;
@@ -97,7 +104,7 @@ main {
 }
 
 .leaderboard h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -111,6 +118,7 @@ main {
 }
 
 .leaderboard tr {
+    display: flex;
     background-color: var(--nav-color);
     border-radius: 5px;
     transition: transform 0.2s ease;
@@ -122,7 +130,7 @@ main {
 
 .leaderboard td {
     padding: 0.75rem;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 
 .leaderboard .number {
@@ -163,6 +171,7 @@ main {
 }
 
 .user-rank {
+    font-size: 1.2rem;
     margin-top: auto;
     background-color: var(--accent-color);
     border-radius: 5px;

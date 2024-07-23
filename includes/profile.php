@@ -18,11 +18,11 @@
                 <form>
                     <div class="form-group">
                         <!-- <label for="inputFirstName">First Name</label> -->
-                        <input type="text" id="inputFirstName" placeholder="School Name">
+                        <input type="text" id="inputFirstName" placeholder="UserID">
                     </div>
                     <div class="form-group">
                         <!-- <label for="inputLastName">Last Name</label> -->
-                        <input type="text" id="inputLastName" placeholder="Team Name">
+                        <input type="text" id="inputLastName" placeholder="School Name">
                     </div>
                     <div class="form-group">
                         <!-- <label for="inputEmail">Email</label> -->
@@ -45,7 +45,7 @@
                     <div class="form-group">
                         <input type="text" id="inputAddress" placeholder="Member 1">
                     </div>
-                    <button type="submit" class="btn">Save Changes</button>
+                    <!-- <button type="submit" class="btn">Save Changes</button> -->
                 </form>
             </div>
             <!-- Public Info -->
@@ -58,15 +58,14 @@
                     </div>
                     <div class="form-group">
                         <!-- <label for="inputBio">Short Description</label> -->
-                        <textarea id="inputBio" rows="4" placeholder="Tell something about yourself"></textarea>
+                        <textarea id="inputBio" rows="4" placeholder="Team Slogan"></textarea>
                     </div>
                     <div class="form-group image-upload">
-                        <label for="imageUpload" class="upload-label">Profile Picture</label>
-                        <input type="file" id="imageUpload" class="file-input">
+                        <label>Your Profile Picture</label>
                         <img id="preview" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Profile Picture">
-                        <small>For best results, use an image at least 128px by 128px in .jpg format</small>
+                        <!-- <small>For best results, use an image at least 128px by 128px in .jpg format</small> -->
                     </div>
-                    <button type="submit" class="btn">Save Changes</button>
+                    <!-- <button type="submit" class="btn">Save Changes</button> -->
                 </form>
             </div>
         </div>

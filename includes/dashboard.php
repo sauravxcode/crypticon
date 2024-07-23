@@ -29,10 +29,11 @@
         <div class="leaderboard">
             <h1>Ranking</h1>
             <table>
+                <tbody>
                 <tr>
                     <td class="number">1</td>
-                    <td class="name">Lee Taeyong</td>
-                    <td class="points">258.244 🏅</td>
+                    <td class="name">Lee Taeyong 🏅</td>
+                    <td class="points">258.244</td>
                 </tr>
                 <tr>
                     <td class="number">2</td>
@@ -69,6 +70,28 @@
                     <td class="name">Johnny Suh</td>
                     <td class="points">258.208</td>
                 </tr>
+                <tr>
+                    <td class="number">5</td>
+                    <td class="name">Johnny Suh</td>
+                    <td class="points">258.208</td>
+                </tr>
+                <tr>
+                    <td class="number">5</td>
+                    <td class="name">Johnny Suh</td>
+                    <td class="points">258.208</td>
+                </tr>
+                <tr>
+                    <td class="number">5</td>
+                    <td class="name">Johnny Suh</td>
+                    <td class="points">258.208</td>
+                </tr>
+                <tr>
+                    <td class="number">5</td>
+                    <td class="name">Johnny Suh</td>
+                    <td class="points">258.208</td>
+                </tr>
+                
+                </tbody>
             </table>
             <div class="user-rank">
                 <span class="rank-number">8</span>
