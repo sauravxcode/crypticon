@@ -23,6 +23,7 @@ html {
 
 main {
     display: flex;
+    width: 100%;
     margin: 0 auto;
     margin-top: 5rem;
     padding: 2rem;
@@ -62,10 +63,17 @@ tbody{
 
 .question-box {
     flex-grow: 1;
-    font-size: 0.9rem;
     line-height: 1.6;
     max-height: calc(100% - 60px);
     overflow-y: auto;
+}
+
+.question-box h2{
+    font-size: 3rem;
+}
+
+.question-box p{
+    font-size: 1.2rem;
 }
 
 .answer-input {
@@ -74,6 +82,8 @@ tbody{
 }
 
 .answer-input input {
+    width: 100%;
+    font-size: 1.5rem;
     flex-grow: 1;
     padding: 0.75rem;
     border: none;
@@ -82,7 +92,9 @@ tbody{
     color: var(--text-color);
 }
 
+
 .answer-input button {
+    font-size: 1.5rem;
     padding: 0.75rem 1.5rem;
     background-color: var(--accent-color);
     color: white;
@@ -129,6 +141,7 @@ tbody{
 }
 
 .leaderboard td {
+    flex-grow: 2;
     padding: 0.75rem;
     font-size: 1.2rem;
 }
@@ -203,10 +216,19 @@ tbody{
 }
 
 #countdown {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: bold;
 }
 
+@media (max-width: 1024px) {
+    main{
+        gap: 10px
+    }
+
+    .game-area {
+        flex: 0 0 60%;
+    }
+}
 @media (max-width: 768px) {
     main {
         flex-direction: column;
@@ -217,4 +239,30 @@ tbody{
         width: 100%;
         flex: none;
     }
+
+    .answer-input{
+        margin-bottom: 20px;
+    }
+
+    .timer{
+        margin-bottom: 20px;
+    }
+
+    #countdown{
+        font-size: 4rem;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .answer-input input {
+        font-size: 0.9rem;
+    }
+
+    .answer-input button {
+        font-size: 0.9rem;
+    }
+
+    
+    
 }

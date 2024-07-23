@@ -91,7 +91,7 @@
                     <td class="name">Johnny Suh</td>
                     <td class="points">258.208</td>
                 </tr>
-                
+
                 </tbody>
             </table>
             <div class="user-rank">
@@ -108,12 +108,4 @@
     </div>
 </main>
 </body>
-<script>
-window.addEventListener("load", function () {
-    const loader = document.querySelector(".loader");
-    setTimeout(function () {
-        loader.classList.add("loaded");
-        loader.style.display = "none";
-    }, 1000);
-});</script>
 </html>
