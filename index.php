@@ -284,11 +284,9 @@
                                     <span class="headline__subtitle">Crypticon 2024</span>
                                     <h1 class="large">Game will begin in</h1>
                                     <div class="media__countdown">
-                                        <div id="countdown">
                                             <?php
                                             include 'includes/timer.php';
                                             ?>
-                                        </div>
                                     </div>
                                 </div>
                                 <!-- Headline End -->

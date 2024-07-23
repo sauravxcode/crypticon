@@ -1,3 +1,13 @@
+<?php
+session_start();
+include("../includes/config.php");
+
+if (!isset($_SESSION['username']) || $_SESSION['username'] !== 'admin') {
+    header("Location: ../login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,37 +82,7 @@
     </style>
 </head>
 <body>
-<nav>
-        <div class="nav-bar">
-            <i class='bx bx-menu sidebarOpen'></i>
-            <span class="logo navLogo"><a href="dashboard.php">Admin Panel</a></span>
-
-            <div class="menu">
-                <div class="logo-toggle">
-                    <span class="logo"><a href="#">Admin Panel</a></span>
-                    <i class='bx bx-x siderbarClose'></i>
-                </div>
-
-                <ul class="nav-links">
-                    <!-- <li><a href="dashboard.php">Home</a></li> -->
-                    <li><a href="leaderboard.php">Leaderboard</a></li>
-                    <!-- <li><a href="https://discord.gg/nXJ7pv5Zw4">Discord</a></li> -->
-                </ul>
-            </div>
-
-    
-            <div class="darkLight-searchBox searchToggle">
-            <div class="profile-dropdown">
-                <i class='bx bxs-user-circle' id="profile"></i>
-                <div class="dropdown-content">
-                    <a href="profile.php">My Profile</a>
-                    <a href="logout.php">Logout</a>
-                </div>
-            </div>
-</div>
-        </div>
-    </nav>
-
+<?php include('admin-navbar.php'); ?>
     
     <div class="container">
         <div class="option" id="edit-user">
@@ -114,35 +94,15 @@
             <h2>Edit Levels</h2>
         </div>
     </div>
-    <script>
-        const body = document.querySelector("body"),
-            nav = document.querySelector("nav"),
-            modeToggle = document.querySelector(".dark-light"),
-            searchToggle = document.querySelector(".searchToggle"),
-            sidebarOpen = document.querySelector(".sidebarOpen"),
-            siderbarClose = document.querySelector(".siderbarClose");
-
-        // JavaScript to toggle sidebar
-        sidebarOpen.addEventListener("click", () => {
-            nav.classList.add("active");
-        });
-
-        body.addEventListener("click", e => {
-            let clickedElm = e.target;
-
-            if (!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")) {
-                nav.classList.remove("active");
-            }
-        });
-
-        document.getElementById("edit-user").addEventListener("click", () => {
-    window.location.href = "user-detail.php";
-});
-
-document.getElementById("edit-level").addEventListener("click", () => {
-    window.location.href = "level-detail.php";
-});
-
-    </script>
 </body>
+<script>
+    document.getElementById("edit-user").addEventListener("click", () => {
+        window.location.href = "user-detail.php";
+    });
+
+    document.getElementById("edit-level").addEventListener("click", () => {
+        window.location.href = "level-detail.php";
+    });
+</script>
+
 </html>

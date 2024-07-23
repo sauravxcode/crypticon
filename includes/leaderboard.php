@@ -1,61 +1,155 @@
+<?php
+session_start();
+require_once 'config.php';
+
+// Check if user is logged in
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../login.php");
+    exit();
+}
+
+// Handle logout
+if (isset($_POST['logout'])) {
+    header("Location: logout.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="leaderboard.css">
-  </head>
-  <body>
-  <?php
-   include ("header.php"); 
-   ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="leaderboard.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+<?php include_once("header.php") ?>
     <main>
-      <div id="header">
-        <h1>Ranking</h1>
-      </div>
-      <div id="leaderboard">
-        <div class="ribbon"></div>
-        <table>
-          <tbody> 
-          <tr>
-            <td class="number">1</td>
-            <td class="name">Lee Taeyong</td>
-            <td class="points">
-              258.244 <img class="gold-medal" src="https://github.com/malunaridev/Challenges-iCodeThis/blob/master/4-leaderboard/assets/gold-medal.png?raw=true" alt="gold medal"/>
-            </td>
-          </tr>
-          <tr>
-            <td class="number">2</td>
-            <td class="name">Mark Lee</td>
-            <td class="points">258.242</td>
-          </tr>
-          <tr>
-            <td class="number">3</td>
-            <td class="name">Xiao Dejun</td>
-            <td class="points">258.223</td>
-          </tr>
-          <tr>
-            <td class="number">4</td>
-            <td class="name">Qian Kun</td>
-            <td class="points">258.212</td>
-          </tr>
-          <tr>
-            <td class="number">5</td>
-            <td class="name">Johnny Suh</td>
-            <td class="points">258.208</td>
-          </tr>
-          </tbody>
-        </table>
-        <div id="buttons">
+        <div class="leaderboard">
+            <h1>Leaderboard</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank">Rank</th>
+                        <th class="username">Username</th>
+                        <th class="school-name">School Name</th>
+                        <th class="score">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="username">Lee Taeyong 🏅</td>
+                        <td class="school-name">XYZ High senior public school</td>
+                        <td class="score">258.244</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="username">Mark Lee</td>
+                        <td class="school-name">ABC Academy</td>
+                        <td class="score">258.242</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="username">Xiao Dejun</td>
+                        <td class="school-name">PQR School</td>
+                        <td class="score">258.223</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="username">Qian Kun</td>
+                        <td class="school-name">DEF Institute</td>
+                        <td class="score">258.212</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="username">Xiao Dejun</td>
+                        <td class="school-name">PQR School</td>
+                        <td class="score">258.223</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="username">Qian Kun</td>
+                        <td class="school-name">DEF Institute</td>
+                        <td class="score">258.212</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="username">Xiao Dejun</td>
+                        <td class="school-name">PQR School</td>
+                        <td class="score">258.223</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="username">Qian Kun</td>
+                        <td class="school-name">DEF Institute</td>
+                        <td class="score">258.212</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="username">Xiao Dejun</td>
+                        <td class="school-name">PQR School</td>
+                        <td class="score">258.223</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="username">Qian Kun</td>
+                        <td class="school-name">DEF Institute</td>
+                        <td class="score">258.212</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="username">Xiao Dejun</td>
+                        <td class="school-name">PQR School</td>
+                        <td class="score">258.223</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="username">Qian Kun</td>
+                        <td class="school-name">DEF Institute</td>
+                        <td class="score">258.212</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="username">Xiao Dejun</td>
+                        <td class="school-name">PQR School</td>
+                        <td class="score">258.223</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="username">Qian Kun</td>
+                        <td class="school-name">DEF Institute</td>
+                        <td class="score">258.212</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="username">Xiao Dejun</td>
+                        <td class="school-name">PQR School</td>
+                        <td class="score">258.223</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="username">Qian Kun</td>
+                        <td class="school-name">DEF Institute</td>
+                        <td class="score">258.212</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="username">Xiao Dejun</td>
+                        <td class="school-name">PQR School</td>
+                        <td class="score">258.223</td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="username">Qian Kun</td>
+                        <td class="school-name">DEF Institute</td>
+                        <td class="score">258.212</td>
+                    </tr>
+                    <!-- Additional rows as needed -->
+                </tbody>
+            </table>
         </div>
-      </div>
     </main>
-  </body>
+</body>
 </html>

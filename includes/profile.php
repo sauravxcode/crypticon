@@ -19,7 +19,8 @@ mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 $user_data = mysqli_fetch_assoc($result);
 
-$query = "SELECT MemberName, MemberEmail, MemberRole FROM TeamMembers WHERE SchoolID = ?";
+$query = "SELECT MemberName FROM TeamMembers WHERE SchoolID = ?";
+
 $stmt = mysqli_prepare($conn, $query);
 mysqli_stmt_bind_param($stmt, "i", $user_data['SchoolID']);
 mysqli_stmt_execute($stmt);
@@ -67,7 +68,7 @@ $team_members = mysqli_fetch_all($team_members_result, MYSQLI_ASSOC);
             for ($i = 0; $i < 3; $i++) {
                 if (isset($team_members[$i])) {
                     $member = $team_members[$i];
-                    $value = $member['MemberName'] . ' - ' . $member['MemberRole'];
+                    $value = $member['MemberName'];
                 } else {
                     $value = '';
                 }

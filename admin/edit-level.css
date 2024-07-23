@@ -73,12 +73,13 @@ body {
     margin-bottom: 15px;
 }
 
-.form-group input {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     background-color: #1c212c;
-    color: #7a8395;
+    color: #ffffff;
     border: 1px solid #7a83951e;
     border-radius: 5px;
     box-sizing: border-box;
@@ -136,7 +137,8 @@ img#preview {
     border-collapse: collapse;
 }
 
-.level-table th, .level-table td {
+.level-table th,
+.level-table td {
     border: 1px solid #7a839530;
     padding: 10px;
     text-align: left;

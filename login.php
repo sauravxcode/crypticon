@@ -16,7 +16,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_stmt_get_result($stmt);
 
     if ($row = mysqli_fetch_assoc($result)) {
-        if ($password === $row['Password']) {
+        if (password_verify($password, $row['Password'])) {
+            if($row['Username'] === 'admin') {
+                // Redirect to admin page
+                $_SESSION['user_id'] = $row['UserID'];
+                $_SESSION['username'] = $row['Username'];
+                header("Location: admin/dashboard.php");
+                exit;
+            }
+
             // Check number of active sessions
             $sessionCount = mysqli_query($conn, "SELECT COUNT(*) FROM UserSessions WHERE UserID = " . $row['UserID']);
             $sessionCount = mysqli_fetch_array($sessionCount)[0];

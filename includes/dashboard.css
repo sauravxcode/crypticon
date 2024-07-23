@@ -5,6 +5,9 @@
     --text-color: #ffffff;
     --accent-color: #7289da;
     --input-bg: #2c2f33;
+    --gold-rank: #ffd700;
+    --silver-rank: #c0c0c0;
+    --bronze-rank: #cd7f32;
 }
 
 * {
@@ -17,6 +20,7 @@
 body,
 html {
     height: 100%;
+    width: 100%;
     background-color: var(--body-color);
     color: var(--text-color);
 }
@@ -132,27 +136,11 @@ tbody {
     display: flex;
     background-color: var(--nav-color);
     border-radius: 5px;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .leaderboard tr:hover {
     transform: translateY(-2px);
-}
-
-.leaderboard tr.moving-up {
-    animation: moveUp 0.5s ease;
-}
-
-@keyframes moveUp {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
 }
 
 .leaderboard td {
@@ -268,12 +256,16 @@ tbody {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     #answer-form input {
         font-size: 0.9rem;
     }
 
     #answer-form button {
         font-size: 0.9rem;
+    }
+
+    .question-box p {
+        font-size: 1rem;
     }
 }

@@ -23,7 +23,7 @@
 
                 <ul class="nav-links">
                     <li><a href="dashboard.php">Dashboard</a></li>
-                    <li><a href="leaderboard.php">Leaderboard</a></li>
+                    <li><a href="../includes/leaderboard.php">Leaderboard</a></li>
                     <!-- <li><a href="https://discord.gg/nXJ7pv5Zw4">Discord</a></li> -->
                 </ul>
             </div>
@@ -33,8 +33,7 @@
             <div class="profile-dropdown">
                 <i class='bx bxs-user-circle' id="profile"></i>
                 <div class="dropdown-content">
-                    <a href="profile.php">My Profile</a>
-                    <a href="logout.php">Logout</a>
+                    <a href="../includes/logout.php">Logout</a>
                 </div>
             </div>
 </div>

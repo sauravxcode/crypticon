@@ -33,24 +33,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['answer'])) {
     $correct_answer = mysqli_fetch_assoc($result)['Answer'];
 
     if (strtolower($answer) === strtolower($correct_answer)) {
-        // Update score and move to next level
-        $new_score = $game_data['Score'] + 200;
-        $new_level = $game_data['CurrentLevel'] + 1;
-        $update_query = "UPDATE Leaderboard SET Score = ? WHERE SchoolID = ?";
-        $stmt = mysqli_prepare($conn, $update_query);
-        mysqli_stmt_bind_param($stmt, "ii", $new_score, $game_data['SchoolID']);
-        mysqli_stmt_execute($stmt);
+    // Update score and move to next level
+    $new_score = $game_data['Score'] + 200;
+    $new_level = $game_data['CurrentLevel'] + 1;
+    $update_query = "UPDATE Leaderboard SET Score = ? WHERE SchoolID = ?";
+    $stmt = mysqli_prepare($conn, $update_query);
+    mysqli_stmt_bind_param($stmt, "ii", $new_score, $game_data['SchoolID']);
+    mysqli_stmt_execute($stmt);
 
-        // Update CurrentLevel in SchoolData
-        $update_level_query = "UPDATE SchoolData SET CurrentLevel = ? WHERE SchoolID = ?";
-        $stmt = mysqli_prepare($conn, $update_level_query);
-        mysqli_stmt_bind_param($stmt, "ii", $new_level, $game_data['SchoolID']);
-        mysqli_stmt_execute($stmt);
+    // Update CurrentLevel in SchoolData
+    $update_level_query = "UPDATE SchoolData SET CurrentLevel = ? WHERE SchoolID = ?";
+    $stmt = mysqli_prepare($conn, $update_level_query);
+    mysqli_stmt_bind_param($stmt, "ii", $new_level, $game_data['SchoolID']);
+    mysqli_stmt_execute($stmt);
 
-        // Redirect to refresh the page and show next question
-        header("Location: dashboard.php");
-        exit();
-    } else {
+    // Recalculate ranks
+    $rank_query = "SET @rank = 0; 
+                   UPDATE Leaderboard 
+                   SET sRank = (@rank := @rank + 1) 
+                   ORDER BY Score DESC, LastUpdated ASC";
+    mysqli_multi_query($conn, $rank_query);
+
+    // Redirect to refresh the page and show next question
+    header("Location: dashboard.php");
+    exit();
+}
+ else {
         $error_message = "Incorrect answer. Try again after the 5 second cooldown.";
     }
 }
@@ -59,8 +67,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['answer'])) {
 $leaderboard_query = "SELECT s.SchoolName, l.Score, l.sRank 
                       FROM Leaderboard l 
                       JOIN SchoolData s ON l.SchoolID = s.SchoolID 
+                      JOIN UserLogin u ON s.SchoolID = u.SchoolID
+                      WHERE u.Username != 'admin'
                       ORDER BY l.Score DESC, l.sRank ASC 
                       LIMIT 10";
+
 $leaderboard_result = mysqli_query($conn, $leaderboard_query);
 $leaderboard_data = mysqli_fetch_all($leaderboard_result, MYSQLI_ASSOC);
 ?>
@@ -74,7 +85,6 @@ $leaderboard_data = mysqli_fetch_all($leaderboard_result, MYSQLI_ASSOC);
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="../css/loaders/loader.css">
     <title>Game Arena | Crypticon 2024</title>
 </head>
 <body>
@@ -83,7 +93,7 @@ $leaderboard_data = mysqli_fetch_all($leaderboard_result, MYSQLI_ASSOC);
         <div class="game-area">
             <div class="question-box">
                 <h2>Level : <?php echo $game_data['CurrentLevel']; ?></h2>
-                <p><?php echo $game_data['Question']; ?></p>
+                <p><?php echo $game_data['Question'] ?? $game_data['Question']; ?></p>
                 <?php if ($game_data['Link']): ?>
                     <p>Link: <a href="<?php echo $game_data['Link']; ?>" target="_blank"><?php echo $game_data['Link']; ?></a></p>
                 <?php endif; ?>
@@ -119,9 +129,7 @@ $leaderboard_data = mysqli_fetch_all($leaderboard_result, MYSQLI_ASSOC);
                 </div>
             </div>
             <div class="timer">
-                <div id="countdown">
                     <?php include_once("timer.php") ?>
-                </div>
             </div>
         </div>
     </main>
@@ -159,7 +167,7 @@ $leaderboard_data = mysqli_fetch_all($leaderboard_result, MYSQLI_ASSOC);
         .catch(error => console.error('Error:', error));
         }
 
-        setInterval(updateLeaderboard, 5000);
+        setInterval(updateLeaderboard, 1000);
 
     </script>
 </body>
