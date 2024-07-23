@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
 });
 
 document.getElementById("gameplay").addEventListener("click", () => {
-    window.location.href = "game.php";
+    window.location.href = "dashboard.php";
 });
 document.getElementById("logout-btn").addEventListener("click", () => {
     window.location.href = "../index.php";

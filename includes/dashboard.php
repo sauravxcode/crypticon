@@ -7,11 +7,14 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="../css/loaders/loader.css">
     <title>Game Arena | Crypticon 2024</title>
 </head>
 <body>
+    
     <?php include_once("header.php") ?>
     <main>
+        
     <div class="game-area">
         <div class="question-box">
             <h2>Question:</h2>
@@ -79,4 +82,12 @@
     </div>
 </main>
 </body>
+<script>
+window.addEventListener("load", function () {
+    const loader = document.querySelector(".loader");
+    setTimeout(function () {
+        loader.classList.add("loaded");
+        loader.style.display = "none";
+    }, 1000);
+});</script>
 </html>

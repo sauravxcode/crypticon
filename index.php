@@ -114,6 +114,11 @@
                                                                     <i class="fa-solid fa-graduation-cap"></i>
                                                                 </a>
                                                             </li>
+                                                            <li>
+                                                                <a href="https://discord.gg/nXJ7pv5Zw4" target="_blank">
+                                                                    <i class="fa-brands fa-discord"></i>
+                                                                </a>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                     <!-- Menu Socials End -->
@@ -148,11 +153,11 @@
                                                 <li>
                                                     <a href="#0" id="about-trigger">About Us</a>
                                                 </li>
-                                                <li>
+                                                <!-- <li>
                                                     <a href="#0" id="portfolio-trigger">Leaderboard</a>
-                                                </li>
+                                                </li> -->
                                                 <li>
-                                                    <a href="#0" id="contact-trigger">Contact</a>
+                                                    <a href="#0" id="contact-trigger">Contact Us</a>
                                                 </li>
                                             </ul>
                                             <!-- Navigation End -->
@@ -226,6 +231,11 @@
                                                 <i class="fa-solid fa-graduation-cap"></i>
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="https://discord.gg/nXJ7pv5Zw4" target="_blank">
+                                                <i class="fa-brands fa-discord"></i>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <!-- Socials Desktop End -->
@@ -274,7 +284,20 @@
                                     <span class="headline__subtitle">Crypticon 2024</span>
                                     <h1 class="large">Game will begin in</h1>
                                     <div class="media__countdown">
-                                        <div id="countdown"></div>
+                                        <div id="countdown">
+                                            <?php
+                                            $targetDate = new DateTime('2024-08-24 12:00:00', new DateTimeZone('Asia/Kolkata'));
+                                            $now = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
+                                            $interval = $now->diff($targetDate);
+
+                                            if ($interval->days > 0) {
+                                                echo $interval->format('%a days');
+                                            } else {
+                                                $remainingSeconds = $interval->h * 3600 + $interval->i * 60 + $interval->s;
+                                                echo sprintf('%02d:%02d:%02d', ($remainingSeconds/3600), ($remainingSeconds/60%60), $remainingSeconds%60);
+                                            }
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Headline End -->
@@ -319,6 +342,11 @@
                                 <li>
                                     <a href="https://mapsashokvihar.net/" target="_blank">
                                         <i class="fa-solid fa-graduation-cap"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.gg/nXJ7pv5Zw4" target="_blank">
+                                        <i class="fa-brands fa-discord"></i>
                                     </a>
                                 </li>
                             </ul>

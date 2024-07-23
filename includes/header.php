@@ -26,7 +26,7 @@
                 <ul class="nav-links">
                     <li><a href="dashboard.php">Home</a></li>
                     <li><a href="leaderboard.php">Leaderboard</a></li>
-                    <li><a href="#">Discord</a></li>
+                    <li><a href="https://discord.gg/nXJ7pv5Zw4">Discord</a></li>
                 </ul>
             </div>
 

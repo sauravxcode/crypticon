@@ -25,7 +25,7 @@
         </div>
     </div>
 </div>
-        <!-- Loader End -->
+    <!-- Loader End -->
 <div id="container">
   <!-- <canvas id="canvas"></canvas> -->
   <div class="login-container">
@@ -45,7 +45,7 @@
            <button type="submit" id="login-game">LOGIN 🡥</button>
            <div class="link">
               Have a Question?
-              <a href="#">Join Discord</a>
+              <a href="https://discord.gg/nXJ7pv5Zw4">Join Discord</a>
            </div>
         </form>
      </div>
