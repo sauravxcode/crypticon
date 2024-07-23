@@ -18,7 +18,8 @@
     <div class="game-area">
         <div class="question-box">
             <h2>Question:</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto suscipit minima ut molestias molestiae quae voluptate fugit. Ipsa, recusandae repellat nobis quidem asperiores, quam reprehenderit exercitationem vel obcaecati voluptates veniam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi architecto eos laudantium recusandae consectetur quaerat adipisci itaque, numquam ipsam voluptates obcaecati dicta libero laboriosam ut! Voluptatibus adipisci nesciunt, officiis vitae eum tempora facilis modi veniam unde, inventore beatae obcaecati sit rerum excepturi cupiditate distinctio quod, cumque voluptatem! Voluptas amet enim perferendis tempora! Nihil nisi perferendis omnis voluptatibus fuga dignissimos eius quibusdam consectetur quisquam, cupiditate odio quod neque ullam iste officia! Animi exercitationem quod sit incidunt, ullam aspernatur eos, porro recusandae expedita possimus quos nesciunt explicabo tempora beatae eum veritatis, quasi libero deserunt nemo cum officiis cupiditate doloribus tenetur? Earum, aspernatur.</p>
+            <p>Text</p>
+            <p>Link :<a href="#">link text</a></p>
         </div>
         <div class="answer-input">
             <input type="text" id="answer" placeholder="Your answer">
@@ -100,7 +101,9 @@
             </div>
         </div>
         <div class="timer">
-            <div id="countdown">05:00</div>
+            <div id="countdown">
+                <?php include_once("timer.php") ?>
+            </div>
         </div>
     </div>
 </main>

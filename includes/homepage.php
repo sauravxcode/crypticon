@@ -1,3 +1,19 @@
+<?php
+session_start();
+require_once 'config.php';
+
+// Check if user is logged in
+if (!isset($_SESSION['user_id'])) {
+    die("Access denied. Please <a href='../login.php'>login</a> to view this page.");
+}
+
+// Handle logout
+if (isset($_POST['logout'])) {
+    header("Location: logout.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
