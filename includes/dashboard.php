@@ -17,8 +17,8 @@
         
     <div class="game-area">
         <div class="question-box">
-            <h2>Question:</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto suscipit minima ut molestias molestiae quae voluptate fugit. Ipsa, recusandae repellat nobis quidem asperiores, quam reprehenderit exercitationem vel obcaecati voluptates veniam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi architecto eos laudantium recusandae consectetur quaerat adipisci itaque, numquam ipsam voluptates obcaecati dicta libero laboriosam ut! Voluptatibus adipisci nesciunt, officiis vitae eum tempora facilis modi veniam unde, inventore beatae obcaecati sit rerum excepturi cupiditate distinctio quod, cumque voluptatem! Voluptas amet enim perferendis tempora! Nihil nisi perferendis omnis voluptatibus fuga dignissimos eius quibusdam consectetur quisquam, cupiditate odio quod neque ullam iste officia! Animi exercitationem quod sit incidunt, ullam aspernatur eos, porro recusandae expedita possimus quos nesciunt explicabo tempora beatae eum veritatis, quasi libero deserunt nemo cum officiis cupiditate doloribus tenetur? Earum, aspernatur.</p>
+            <h2>LEVEL: 01</h2>
+            <p>Link: https://imgur.com/a/D5tkz4C</p>
         </div>
         <div class="answer-input">
             <input type="text" id="answer" placeholder="Your answer">
@@ -90,7 +90,7 @@
                     <td class="name">Johnny Suh</td>
                     <td class="points">258.208</td>
                 </tr>
-                
+
                 </tbody>
             </table>
             <div class="user-rank">
@@ -100,17 +100,9 @@
             </div>
         </div>
         <div class="timer">
-            <div id="countdown">05:00</div>
+            <div id="countdown">05:00:00</div>
         </div>
     </div>
 </main>
 </body>
-<script>
-window.addEventListener("load", function () {
-    const loader = document.querySelector(".loader");
-    setTimeout(function () {
-        loader.classList.add("loaded");
-        loader.style.display = "none";
-    }, 1000);
-});</script>
 </html>
