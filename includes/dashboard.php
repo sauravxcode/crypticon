@@ -17,8 +17,9 @@
         
     <div class="game-area">
         <div class="question-box">
-            <h2>LEVEL: 01</h2>
-            <p>Link: https://imgur.com/a/D5tkz4C</p>
+            <h2>Question:</h2>
+            <p>Text</p>
+            <p>Link :<a href="#">link text</a></p>
         </div>
         <div class="answer-input">
             <input type="text" id="answer" placeholder="Your answer">
@@ -100,7 +101,9 @@
             </div>
         </div>
         <div class="timer">
-            <div id="countdown">05:00:00</div>
+            <div id="countdown">
+                <?php include_once("timer.php") ?>
+            </div>
         </div>
     </div>
 </main>
