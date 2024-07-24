@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = $_POST['password'];
 
-    $sql = "SELECT UserID, Username, Password FROM UserLogin WHERE Username = ? OR Email = ?";
+    $sql = "SELECT UserID, Username, Password FROM userlogin WHERE Username = ? OR Email = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "ss", $username, $username);
     mysqli_stmt_execute($stmt);
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
             // Check number of active sessions
-            $sessionCount = mysqli_query($conn, "SELECT COUNT(*) FROM UserSessions WHERE UserID = " . $row['UserID']);
+            $sessionCount = mysqli_query($conn, "SELECT COUNT(*) FROM usersessions WHERE UserID = " . $row['UserID']);
             $sessionCount = mysqli_fetch_array($sessionCount)[0];
 
             if ($sessionCount >= 3) {
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['username'] = $row['Username'];
 
             $sessionID = session_id();
-            $query = "INSERT INTO UserSessions (SessionID, UserID) 
+            $query = "INSERT INTO usersessions (SessionID, UserID) 
                       VALUES ('$sessionID', " . $row['UserID'] . ") 
                       ON DUPLICATE KEY UPDATE LoginTime = CURRENT_TIMESTAMP";
             mysqli_query($conn, $query);
@@ -67,9 +67,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="css/loaders/loader.css">
 </head>
 <body>   
-    <div class="loader">
-        <!-- Loader HTML content -->
+        <div class="loader">
+    <div class="loader__container">
+        <div class="pyramid-loader">
+            <div class="wrapper">
+                <span class="side side1"></span>
+                <span class="side side2"></span>
+                <span class="side side3"></span>
+                <span class="side side4"></span>
+                <span class="shadow"></span>
+            </div>  
+        </div>
     </div>
+</div>
     <div id="container">
         <div class="login-container">
             <div class="login-form">

@@ -7,7 +7,7 @@ session_start();
 $_SESSION = array();
 
 $sessionID = session_id();
-mysqli_query($conn, "DELETE FROM UserSessions WHERE SessionID = '$sessionID'");
+mysqli_query($conn, "DELETE FROM usersessions WHERE SessionID = '$sessionID'");
 
 
 // Destroy the session

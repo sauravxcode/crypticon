@@ -10,8 +10,8 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 
 $query = "SELECT u.UserID, u.Username, u.Email, s.SchoolID, s.SchoolName, s.SchoolAddress, s.SchoolContactInfo, s.UserProfilePicLink 
-          FROM UserLogin u 
-          JOIN SchoolData s ON u.SchoolID = s.SchoolID 
+          FROM userlogin u 
+          JOIN schooldata s ON u.SchoolID = s.SchoolID 
           WHERE u.UserID = ?";
 $stmt = mysqli_prepare($conn, $query);
 mysqli_stmt_bind_param($stmt, "i", $user_id);
@@ -19,7 +19,7 @@ mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 $user_data = mysqli_fetch_assoc($result);
 
-$query = "SELECT MemberName FROM TeamMembers WHERE SchoolID = ?";
+$query = "SELECT MemberName FROM teammembers WHERE SchoolID = ?";
 
 $stmt = mysqli_prepare($conn, $query);
 mysqli_stmt_bind_param($stmt, "i", $user_data['SchoolID']);

@@ -2,9 +2,9 @@
 require_once 'config.php';
 
 $leaderboard_query = "SELECT s.SchoolName, l.Score, l.sRank 
-                      FROM Leaderboard l 
-                      JOIN SchoolData s ON l.SchoolID = s.SchoolID 
-                      JOIN UserLogin u ON s.SchoolID = u.SchoolID
+                      FROM leaderboard l 
+                      JOIN schooldata s ON l.SchoolID = s.SchoolID 
+                      JOIN userlogin u ON s.SchoolID = u.SchoolID
                       WHERE u.Username != 'admin'
                       ORDER BY l.Score DESC, l.sRank ASC 
                       LIMIT 10";

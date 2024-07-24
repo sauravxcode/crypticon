@@ -13,8 +13,8 @@ if (isset($_GET['id'])) {
     mysqli_begin_transaction($conn);
 
     try {
-        // Get the UserID from UserLogin
-        $sql = "SELECT UserID FROM UserLogin WHERE SchoolID = ?";
+        // Get the UserID from userlogin
+        $sql = "SELECT UserID FROM userlogin WHERE SchoolID = ?";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "i", $schoolId);
         mysqli_stmt_execute($stmt);
@@ -28,26 +28,26 @@ if (isset($_GET['id'])) {
         mysqli_stmt_bind_param($stmt, "i", $userId);
         mysqli_stmt_execute($stmt);
 
-        // Delete from TeamMembers table
-        $sql = "DELETE FROM TeamMembers WHERE SchoolID = ?";
+        // Delete from teammembers table
+        $sql = "DELETE FROM teammembers WHERE SchoolID = ?";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "i", $schoolId);
         mysqli_stmt_execute($stmt);
 
         // Delete from Leaderboard table
-        $sql = "DELETE FROM Leaderboard WHERE SchoolID = ?";
+        $sql = "DELETE FROM leaderboard WHERE SchoolID = ?";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "i", $schoolId);
         mysqli_stmt_execute($stmt);
 
-        // Delete from UserLogin table
-        $sql = "DELETE FROM UserLogin WHERE SchoolID = ?";
+        // Delete from userlogin table
+        $sql = "DELETE FROM userlogin WHERE SchoolID = ?";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "i", $schoolId);
         mysqli_stmt_execute($stmt);
 
-        // Delete from SchoolData table
-        $sql = "DELETE FROM SchoolData WHERE SchoolID = ?";
+        // Delete from schooldata table
+        $sql = "DELETE FROM schooldata WHERE SchoolID = ?";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "i", $schoolId);
         mysqli_stmt_execute($stmt);

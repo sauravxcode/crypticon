@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $link = $_POST['link'];
     $answer = $_POST['answer'];
 
-    $sql = "UPDATE GameDetails SET Level = ?, Question = ?, Link = ?, Answer = ? WHERE QuestionID = ?";
+    $sql = "UPDATE gamedetails SET Level = ?, Question = ?, Link = ?, Answer = ? WHERE QuestionID = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "isssi", $level, $question, $link, $answer, $questionId);
     mysqli_stmt_execute($stmt);
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit();
 }
 
-$sql = "SELECT * FROM GameDetails WHERE QuestionID = ?";
+$sql = "SELECT * FROM gamedetails WHERE QuestionID = ?";
 $stmt = mysqli_prepare($conn, $sql);
 mysqli_stmt_bind_param($stmt, "i", $questionId);
 mysqli_stmt_execute($stmt);

@@ -22,22 +22,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_begin_transaction($conn);
 
     try {
-        // Insert into SchoolData
-        $sql = "INSERT INTO SchoolData (SchoolName, SchoolAddress, SchoolContactInfo, UserProfilePicLink) VALUES (?, ?, ?, ?)";
+        // Insert into schooldata
+        $sql = "INSERT INTO schooldata (SchoolName, SchoolAddress, SchoolContactInfo, UserProfilePicLink) VALUES (?, ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "ssss", $schoolName, $address, $contact, $userphoto);
         mysqli_stmt_execute($stmt);
         $schoolId = mysqli_insert_id($conn);
 
-        // Insert into UserLogin
-        $sql = "INSERT INTO UserLogin (SchoolID, Username, Password, Email) VALUES (?, ?, ?, ?)";
+        // Insert into userlogin
+        $sql = "INSERT INTO userlogin (SchoolID, Username, Password, Email) VALUES (?, ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "isss", $schoolId, $username, $password, $email);
         mysqli_stmt_execute($stmt);
 
-        // Insert into TeamMembers
+        // Insert into teammembers
         $members = [$member1, $member2, $member3];
-        $sql = "INSERT INTO TeamMembers (SchoolID, MemberName) VALUES (?, ?)";
+        $sql = "INSERT INTO teammembers (SchoolID, MemberName) VALUES (?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
         foreach ($members as $member) {
             mysqli_stmt_bind_param($stmt, "is", $schoolId, $member);
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         // Insert into Leaderboard
-        $sql = "INSERT INTO Leaderboard (SchoolID, Score, sRank) VALUES (?, 0, NULL)";
+        $sql = "INSERT INTO leaderboard (SchoolID, Score, sRank) VALUES (?, 0, NULL)";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "i", $schoolId);
         mysqli_stmt_execute($stmt);
@@ -59,10 +59,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $sql = "SELECT sd.SchoolID, sd.SchoolName, MAX(ul.Email) as Email, sd.SchoolAddress, 
         GROUP_CONCAT(tm.MemberName SEPARATOR ', ') as Members, l.Score, l.sRank
-        FROM SchoolData sd
-        JOIN UserLogin ul ON sd.SchoolID = ul.SchoolID
-        LEFT JOIN TeamMembers tm ON sd.SchoolID = tm.SchoolID
-        LEFT JOIN Leaderboard l ON sd.SchoolID = l.SchoolID
+        FROM schooldata sd
+        JOIN userlogin ul ON sd.SchoolID = ul.SchoolID
+        LEFT JOIN teammembers tm ON sd.SchoolID = tm.SchoolID
+        LEFT JOIN leaderboard l ON sd.SchoolID = l.SchoolID
         WHERE ul.Username != 'admin'
         GROUP BY sd.SchoolID, sd.SchoolName, sd.SchoolAddress, l.Score, l.sRank";
 $result = mysqli_query($conn, $sql);

@@ -11,10 +11,10 @@ $user_id = $_SESSION['user_id'];
 
 // Fetch current level and question
 $query = "SELECT s.SchoolID, s.SchoolName, s.CurrentLevel, g.QuestionID, g.Question, g.Link, l.Score, l.sRank 
-          FROM SchoolData s 
-          JOIN UserLogin u ON s.SchoolID = u.SchoolID
-          JOIN Leaderboard l ON s.SchoolID = l.SchoolID
-          JOIN GameDetails g ON s.CurrentLevel = g.Level
+          FROM schooldata s 
+          JOIN userlogin u ON s.SchoolID = u.SchoolID
+          JOIN leaderboard l ON s.SchoolID = l.SchoolID
+          JOIN gamedetails g ON s.CurrentLevel = g.Level
           WHERE u.UserID = ?";
 $stmt = mysqli_prepare($conn, $query);
 mysqli_stmt_bind_param($stmt, "i", $user_id);
@@ -25,7 +25,7 @@ $game_data = mysqli_fetch_assoc($result);
 // Handle answer submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['answer'])) {
     $answer = mysqli_real_escape_string($conn, $_POST['answer']);
-    $query = "SELECT Answer FROM GameDetails WHERE QuestionID = ?";
+    $query = "SELECT Answer FROM gamedetails WHERE QuestionID = ?";
     $stmt = mysqli_prepare($conn, $query);
     mysqli_stmt_bind_param($stmt, "i", $game_data['QuestionID']);
     mysqli_stmt_execute($stmt);
@@ -36,20 +36,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['answer'])) {
     // Update score and move to next level
     $new_score = $game_data['Score'] + 200;
     $new_level = $game_data['CurrentLevel'] + 1;
-    $update_query = "UPDATE Leaderboard SET Score = ? WHERE SchoolID = ?";
+    $update_query = "UPDATE leaderboard SET Score = ? WHERE SchoolID = ?";
     $stmt = mysqli_prepare($conn, $update_query);
     mysqli_stmt_bind_param($stmt, "ii", $new_score, $game_data['SchoolID']);
     mysqli_stmt_execute($stmt);
 
-    // Update CurrentLevel in SchoolData
-    $update_level_query = "UPDATE SchoolData SET CurrentLevel = ? WHERE SchoolID = ?";
+    // Update CurrentLevel in schooldata
+    $update_level_query = "UPDATE schooldata SET CurrentLevel = ? WHERE SchoolID = ?";
     $stmt = mysqli_prepare($conn, $update_level_query);
     mysqli_stmt_bind_param($stmt, "ii", $new_level, $game_data['SchoolID']);
     mysqli_stmt_execute($stmt);
 
     // Recalculate ranks
     $rank_query = "SET @rank = 0; 
-                   UPDATE Leaderboard 
+                   UPDATE leaderboard 
                    SET sRank = (@rank := @rank + 1) 
                    ORDER BY Score DESC, LastUpdated ASC";
     mysqli_multi_query($conn, $rank_query);
@@ -66,8 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['answer'])) {
 // Fetch leaderboard data
 $leaderboard_query = "SELECT s.SchoolName, l.Score, l.sRank 
                       FROM Leaderboard l 
-                      JOIN SchoolData s ON l.SchoolID = s.SchoolID 
-                      JOIN UserLogin u ON s.SchoolID = u.SchoolID
+                      JOIN schooldata s ON l.SchoolID = s.SchoolID 
+                      JOIN userlogin u ON s.SchoolID = u.SchoolID
                       WHERE u.Username != 'admin'
                       ORDER BY l.Score DESC, l.sRank ASC 
                       LIMIT 10";

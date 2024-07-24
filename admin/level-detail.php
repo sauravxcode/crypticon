@@ -13,13 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $link = $_POST['link'];
     $answer = $_POST['answer'];
 
-    $sql = "INSERT INTO GameDetails (Level, Question, Link, Answer) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO gamedetails (Level, Question, Link, Answer) VALUES (?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "isss", $level, $question, $link, $answer);
     mysqli_stmt_execute($stmt);
 }
 
-$sql = "SELECT * FROM GameDetails ORDER BY Level";
+$sql = "SELECT * FROM gamedetails ORDER BY Level";
 $result = mysqli_query($conn, $sql);
 ?>
 

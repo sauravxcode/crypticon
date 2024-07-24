@@ -20,26 +20,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $member2 = $_POST['member2'];
     $member3 = $_POST['member3'];
 
-    // Update SchoolData table
-    $sql = "UPDATE SchoolData SET SchoolName = ?, SchoolAddress = ?, SchoolContactInfo = ?, UserProfilePicLink = ? WHERE SchoolID = ?";
+    // Update schooldata table
+    $sql = "UPDATE schooldata SET SchoolName = ?, SchoolAddress = ?, SchoolContactInfo = ?, UserProfilePicLink = ? WHERE SchoolID = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "ssssi", $schoolName, $address, $contact, $userphoto, $schoolId);
     mysqli_stmt_execute($stmt);
 
-    // Update UserLogin table
-    $sql = "UPDATE UserLogin SET Username = ?, Email = ? WHERE SchoolID = ?";
+    // Update userlogin table
+    $sql = "UPDATE userlogin SET Username = ?, Email = ? WHERE SchoolID = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "ssi", $username, $email, $schoolId);
     mysqli_stmt_execute($stmt);
 
-    // Update TeamMembers table
-    $sql = "DELETE FROM TeamMembers WHERE SchoolID = ?";
+    // Update teammembers table
+    $sql = "DELETE FROM teammembers WHERE SchoolID = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "i", $schoolId);
     mysqli_stmt_execute($stmt);
 
     $members = [$member1, $member2, $member3];
-    $sql = "INSERT INTO TeamMembers (SchoolID, MemberName) VALUES (?, ?)";
+    $sql = "INSERT INTO teammembers (SchoolID, MemberName) VALUES (?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
     foreach ($members as $member) {
         mysqli_stmt_bind_param($stmt, "is", $schoolId, $member);
@@ -54,9 +54,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $sql = "SELECT sd.*, ul.Email, ul.Username, 
         GROUP_CONCAT(tm.MemberName SEPARATOR '|') as Members
-        FROM SchoolData sd
-        JOIN UserLogin ul ON sd.SchoolID = ul.SchoolID
-        LEFT JOIN TeamMembers tm ON sd.SchoolID = tm.SchoolID
+        FROM schooldata sd
+        JOIN userlogin ul ON sd.SchoolID = ul.SchoolID
+        LEFT JOIN teammembers tm ON sd.SchoolID = tm.SchoolID
         WHERE sd.SchoolID = ?
         GROUP BY sd.SchoolID, sd.SchoolName, sd.SchoolAddress, sd.SchoolContactInfo, sd.UserProfilePicLink, ul.Email, ul.Username";
 

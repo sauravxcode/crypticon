@@ -10,7 +10,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] !== 'admin') {
 if (isset($_GET['id'])) {
     $questionId = $_GET['id'];
 
-    $sql = "DELETE FROM GameDetails WHERE QuestionID = ?";
+    $sql = "DELETE FROM gamedetails WHERE QuestionID = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "i", $questionId);
 
