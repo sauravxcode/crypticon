@@ -10,8 +10,9 @@ document.getElementById("gameplay").addEventListener("click", () => {
     window.location.href = "dashboard.php";
 });
 document.getElementById("logout-btn").addEventListener("click", () => {
-    window.location.href = "../index.php";
+    window.location.href = "logout.php";
 });
+
 const containerEl = document.querySelector(".container");
 const canvasEl = document.querySelector("canvas#neuro");
 const devicePixelRatio = Math.min(window.devicePixelRatio, 2);

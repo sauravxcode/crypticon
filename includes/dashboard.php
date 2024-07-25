@@ -7,6 +7,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+
 $user_id = $_SESSION['user_id'];
 
 // Fetch current level and question
@@ -65,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['answer'])) {
 
 // Fetch leaderboard data
 $leaderboard_query = "SELECT s.SchoolName, l.Score, l.sRank 
-                      FROM Leaderboard l 
+                      FROM leaderboard l 
                       JOIN schooldata s ON l.SchoolID = s.SchoolID 
                       JOIN userlogin u ON s.SchoolID = u.SchoolID
                       WHERE u.Username != 'admin'
@@ -168,6 +169,45 @@ $leaderboard_data = mysqli_fetch_all($leaderboard_result, MYSQLI_ASSOC);
         }
 
         setInterval(updateLeaderboard, 1000);
+
+       function updateQuestion() {
+    fetch('update_question.php')
+        .then(response => response.json())
+        .then(data => {
+            const questionBox = document.querySelector('.question-box');
+            const questionText = questionBox.querySelector('p');
+            const linkElement = questionBox.querySelector('a');
+
+            // Update question text
+            questionText.textContent = data.Question || 'No question available';
+
+            // Handle link
+            if (data.Link) {
+                linkElement.href = data.Link;
+                linkElement.textContent = data.Link;
+                linkElement.style.display = 'inline';
+            } else {
+                linkElement.style.display = 'none';
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+        function checkSession() {
+            fetch('validate_session.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.valid) {
+                        // Session is invalid, logout the user
+                        window.location.href = '../login.php';
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Run the checkSession function every 10 seconds
+        setInterval(checkSession, 10000);
+
 
     </script>
 </body>

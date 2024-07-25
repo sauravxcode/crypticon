@@ -31,8 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($sessionCount >= 3) {
                 // Remove oldest session if limit reached
-                echo "<script>alert('You have reached the maximum number of active sessions. Please log out from the oldest session before logging in again.');</script>";
-            }
+                $removeOldestSession = "DELETE FROM usersessions WHERE UserID = " . $row['UserID'] . " ORDER BY LoginTime ASC LIMIT 1";
+                mysqli_query($conn, $removeOldestSession);
+                // Now proceed with login
+                }
+
 
             $_SESSION['user_id'] = $row['UserID'];
             $_SESSION['username'] = $row['Username'];
