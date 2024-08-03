@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../includes/config.php';
 
 $leaderboard_query = "SELECT s.SchoolName, u.Username, l.Score, l.sRank 
                       FROM leaderboard l 

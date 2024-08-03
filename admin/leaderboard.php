@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'config.php';
+require_once '../includes/config.php';
 
 // Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -30,7 +30,7 @@ $leaderboard_data = mysqli_fetch_all($leaderboard_result, MYSQLI_ASSOC);
     <link rel="stylesheet" href="leaderboard.css">
 </head>
 <body>
-<?php include_once "header.php" ?>
+<?php include_once "admin-navbar.php" ?>
     <main>
         <div class="leaderboard">
             <h1>Leaderboard</h1>
@@ -79,7 +79,7 @@ $leaderboard_data = mysqli_fetch_all($leaderboard_result, MYSQLI_ASSOC);
             .catch(error => console.error('Error:', error));
     }
 
-    setInterval(updateLeaderboard, 3000); // Update every 5 seconds
+    setInterval(updateLeaderboard, 3000); // Update every 3 seconds
     </script>
 </body>
 </html>
