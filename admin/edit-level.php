@@ -1,9 +1,9 @@
 <?php
 session_start();
-include("../includes/config.php");
+include("../u/config.php");
 
 if (!isset($_SESSION['username']) || $_SESSION['username'] !== 'admin') {
-    header("Location: ../logout.php");
+    header("Location: ../u/logout.php");
     exit();
 }
 

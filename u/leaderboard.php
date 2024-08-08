@@ -14,8 +14,7 @@ $leaderboard_query = "SELECT s.SchoolName, u.Username, l.Score, l.sRank
                       JOIN schooldata s ON l.SchoolID = s.SchoolID 
                       JOIN userlogin u ON s.SchoolID = u.SchoolID
                       WHERE u.Username != 'admin'
-                      ORDER BY l.Score DESC, l.sRank ASC 
-                      LIMIT 10";
+                      ORDER BY l.Score DESC, l.sRank ASC";
 
 $leaderboard_result = mysqli_query($conn, $leaderboard_query);
 $leaderboard_data = mysqli_fetch_all($leaderboard_result, MYSQLI_ASSOC);
@@ -56,30 +55,5 @@ $leaderboard_data = mysqli_fetch_all($leaderboard_result, MYSQLI_ASSOC);
             </table>
         </div>
     </main>
-
-    <script>
-    function updateLeaderboard() {
-        fetch('update_leaderboard.php')
-            .then(response => response.json())
-            .then(data => {
-                const leaderboardBody = document.querySelector('.leaderboard table tbody');
-                leaderboardBody.innerHTML = '';
-                data.forEach((team, index) => {
-                    const row = `
-                        <tr>
-                            <td class="rank">${index + 1}</td>
-                            <td class="username">${team.Username}</td>
-                            <td class="school-name">${team.SchoolName}</td>
-                            <td class="score">${Number(team.Score)}</td>
-                        </tr>
-                    `;
-                    leaderboardBody.innerHTML += row;
-                });
-            })
-            .catch(error => console.error('Error:', error));
-    }
-
-    setInterval(updateLeaderboard, 3000); // Update every 5 seconds
-    </script>
 </body>
 </html>

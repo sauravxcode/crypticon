@@ -1,9 +1,9 @@
 <?php
 session_start();
-include("../includes/config.php");
+include("../u/config.php");
 
 if (!isset($_SESSION['username']) || $_SESSION['username'] !== 'admin') {
-    header("Location: ../logout.php");
+    header("Location: ../u/logout.php");
     exit();
 }
 
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$sql = "SELECT sd.SchoolID, sd.SchoolName, MAX(ul.Email) as Email, sd.SchoolAddress, 
+$sql = "SELECT sd.SchoolID, sd.SchoolName, MAX(ul.Username) as Username, sd.SchoolAddress, 
         GROUP_CONCAT(tm.MemberName SEPARATOR ', ') as Members, l.Score, l.sRank
         FROM schooldata sd
         JOIN userlogin ul ON sd.SchoolID = ul.SchoolID
@@ -136,7 +136,7 @@ $result = mysqli_query($conn, $sql);
                     <tr>
                         <th>UserID</th>
                         <th>School Name</th>
-                        <th>Email</th>
+                        <th>Username</th>
                         <th>Address</th>
                         <th>Members</th>
                         <th>Score</th>
@@ -149,7 +149,7 @@ $result = mysqli_query($conn, $sql);
                     <tr>
                         <td><?php echo $row['SchoolID']; ?></td>
                         <td><?php echo $row['SchoolName']; ?></td>
-                        <td><?php echo $row['Email']; ?></td>
+                        <td><?php echo $row['Username']; ?></td>
                         <td><?php echo $row['SchoolAddress']; ?></td>
                         <td><?php echo $row['Members']; ?></td>
                         <td><?php echo $row['Score']; ?></td>

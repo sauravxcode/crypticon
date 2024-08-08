@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../includes/header.css">
+    <link rel="stylesheet" href="../u/header.css">
 </head>
 <body>
 <nav>
         <div class="nav-bar">
             <i class='bx bx-menu sidebarOpen'></i>
-            <span class="logo navLogo"><a href="dashboard.php">Admin Panel</a></span>
+            <span class="logo navLogo"><a href="admin-dashboard.php">Admin Panel</a></span>
 
             <div class="menu">
                 <div class="logo-toggle">
@@ -22,7 +22,7 @@
                 </div>
 
                 <ul class="nav-links">
-                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="admin-dashboard.php">Dashboard</a></li>
                     <li><a href="leaderboard.php">Leaderboard</a></li>
                 </ul>
             </div>
@@ -32,7 +32,7 @@
             <div class="profile-dropdown">
                 <i class='bx bxs-user-circle' id="profile"></i>
                 <div class="dropdown-content">
-                    <a href="../includes/logout.php">Logout</a>
+                    <a href="../u/logout.php">Logout</a>
                 </div>
             </div>
 </div>

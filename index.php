@@ -89,7 +89,7 @@
                                                     >
                                                         <em></em>
                                                         <i class="fa-solid fa-download"></i>
-                                                        <span class="btn-caption">Rules</span>
+                                                        <span class="btn-caption">Notify Me</span>
                                                     </a>
                                                     <!-- Menu Notify Trigger End -->
 
@@ -119,7 +119,6 @@
                                                                     <i class="fa-brands fa-discord"></i>
                                                                 </a>
                                                             </li>
-                                                        </ul>
                                                     </div>
                                                     <!-- Menu Socials End -->
                                                 </div>
@@ -156,9 +155,9 @@
                                                 <!-- <li>
                                                     <a href="#0" id="portfolio-trigger">Leaderboard</a>
                                                 </li> -->
-                                                <li>
+                                                <!-- <li>
                                                     <a href="#0" id="contact-trigger">Contact Us</a>
-                                                </li>
+                                                </li> -->
                                             </ul>
                                             <!-- Navigation End -->
                                         </div>
@@ -222,7 +221,10 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://www.linkedin.com/company/elitegenesis-innovations/" target="_blank">
+                                            <a
+                                                href="https://www.linkedin.com/company/elitegenesis-innovations/"
+                                                target="_blank"
+                                            >
                                                 <i class="fa-brands fa-linkedin"></i>
                                             </a>
                                         </li>
@@ -236,7 +238,6 @@
                                                 <i class="fa-brands fa-discord"></i>
                                             </a>
                                         </li>
-                                    </ul>
                                 </div>
                                 <!-- Socials Desktop End -->
 
@@ -248,7 +249,7 @@
                                 >
                                     <em></em>
                                     <i class="fa-solid fa-download"></i>
-                                    <span class="btn-caption">Rules</span>
+                                    <span class="btn-caption">Notify Me</span>
                                 </a>
                                 <!-- Notify Trigger End -->
                             </div>
@@ -282,12 +283,48 @@
                                 <!-- Headline Start -->
                                 <div id="headline" class="headline">
                                     <span class="headline__subtitle">Crypticon 2024</span>
-                                    <h1 class="large">Game will begin in</h1>
-                                    <div class="media__countdown">
-                                            <?php
-                                            include 'includes/timer.php';
-                                            ?>
-                                    </div>
+                                    <?php
+                                        require_once 'u/config.php';
+
+                                        $sql = "SELECT CompetitionDate, CompetitionEndDate, CompetitionStartTime, CompetitionEndTime FROM competitionInfo ORDER BY CompetitionID DESC LIMIT 1";
+                                        $result = mysqli_query($conn, $sql);
+                                        $row = mysqli_fetch_assoc($result);
+
+                                        $competitionStart = new DateTime($row['CompetitionDate'] . ' ' . $row['CompetitionStartTime'], new DateTimeZone('Asia/Kolkata'));
+                                        $competitionEnd = new DateTime($row['CompetitionEndDate'] . ' ' . $row['CompetitionEndTime'], new DateTimeZone('Asia/Kolkata'));
+                                        
+                                        $competitionStartTimestamp = $competitionStart->getTimestamp() * 1000; // Convert to milliseconds
+                                        $competitionEndTimestamp = $competitionEnd->getTimestamp() * 1000; // Convert to milliseconds
+                                        ?>
+
+                                        <h1 class="large" id="gameStatus">Game status loading...</h1>
+
+                                        <script>
+                                        function updateGameStatus() {
+                                            const now = new Date().getTime();
+                                            const competitionStart = <?php echo $competitionStartTimestamp; ?>;
+                                            const competitionEnd = <?php echo $competitionEndTimestamp; ?>;
+                                            let status;
+
+                                            if (now < competitionStart) {
+                                                status = "Game will begin in";
+                                            } else if (now >= competitionStart && now < competitionEnd) {
+                                                status = "Game has started";
+                                            } else {
+                                                status = "Game has";
+                                            }
+
+                                            document.getElementById('gameStatus').textContent = status;
+                                        }
+
+                                        // Update status immediately and then every second
+                                        updateGameStatus();
+                                        setInterval(updateGameStatus, 1000);
+                                        </script>                                        
+                                        <div class="media__countdown">
+                                            <?php include 'u/timer.php'; ?>
+                                        </div>
+
                                 </div>
                                 <!-- Headline End -->
                             </div>
@@ -324,7 +361,10 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.linkedin.com/company/elitegenesis-innovations/" target="_blank">
+                                    <a
+                                        href="https://www.linkedin.com/company/elitegenesis-innovations/"
+                                        target="_blank"
+                                    >
                                         <i class="fa-brands fa-linkedin"></i>
                                     </a>
                                 </li>
@@ -450,7 +490,7 @@
 
                             <!-- Section Container - Gallery Start -->
                             <div class="inner__container">
-                                <iframe src="http://localhost:3000/includes/leaderboard.php" frameborder="0"></iframe>
+                                <!-- <iframe src="http://localhost:3000/u/leaderboard.php" frameborder="0"></iframe> -->
                             </div>
                             <!-- Section Container - Gallery End -->
                         </div>
@@ -739,9 +779,9 @@
                 <div class="popup__content block-rounded-l">
                     <!-- Notify Popup Title Start -->
                     <div class="popup-title">
-                        <p class="popup-title__title">Get to know about our launch</p>
+                        <p class="popup-title__title">Get to know about Game Start</p>
                         <p class="popup-title__text">
-                            Subscribe to our newsletter and we will send you a notification about the launch of our brand new site
+                            Subscribe to our newsletter and we will send you a notification about the start of our game
                         </p>
                     </div>
                     <!-- Notify Popup Title End -->
