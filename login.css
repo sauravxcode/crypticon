@@ -1,20 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
+:root {
+    --background-color: #0a0e17;
+    --text-color: #ffffff;
+    --highlight-color: #7289da;
+    --input-color: #868686;
+    --border-color: #1a1f2e;
+    --heading-color: #ffffff;
+}
+
 html,
 body {
     min-height: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Ensure no scrollbars appear */
+    overflow: hidden;
     font-family: "Space Grotesk", sans-serif;
 }
 
 body {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 100;
-    color: rgba(255, 255, 255, 0.75);
-    background: #0a0e17; /* Assuming a black background for contrast */
+    color: var(--text-color);
+    background: var(--background-color);
 }
 
 #container {
@@ -55,7 +64,7 @@ body {
 .text {
     font-family: "Space Grotesk", sans-serif;
     font-size: 30px;
-    color: #c7c7c7;
+    color: var(--heading-color);
     font-weight: 600;
     letter-spacing: 2px;
 }
@@ -70,13 +79,13 @@ form .field {
 .field .fas {
     height: 50px;
     width: 60px;
-    color: #868686;
+    color: var(--input-color);
     font-size: 20px;
     line-height: 50px;
-    border: 1px solid #444;
+    border: 1px solid var(--border-color);
     border-right: none;
     border-radius: 5px 0 0 5px;
-    background: #0a0e17;
+    background: var(--background-color);
 }
 .field input,
 form button {
@@ -85,27 +94,28 @@ form button {
     width: 100%;
     outline: none;
     font-size: 19px;
-    color: #868686;
+    color: var(--input-color);
     padding: 0 15px;
     border-radius: 0 5px 5px 0;
-    border: 1px solid #444;
-    caret-color: #339933;
-    background: #0a0e17;
+    border: 1px solid var(--border-color);
+    caret-color: var(--highlight-color);
+    background: var(--background-color);
 }
 input:focus {
-    color: #339933;
-    box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1);
-    background: linear-gradient(#333933, #222922);
+    color: var(--highlight-color);
+    box-shadow: 0 0 5px rgba(114, 137, 218, 0.2), inset 0 0 5px rgba(114, 137, 218, 0.1);
+    background: linear-gradient(#1e2233, #161b2b);
     animation: glow 0.8s ease-out infinite alternate;
 }
+
 @keyframes glow {
     0% {
-        border-color: #339933;
-        box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.1);
+        border-color: var(--highlight-color);
+        box-shadow: 0 0 5px rgba(114, 137, 218, 0.2), inset 0 0 5px rgba(0, 0, 0, 0.1);
     }
     100% {
-        border-color: #6f6;
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.6), inset 0 0 10px rgba(0, 255, 0, 0.4);
+        border-color: #8da0e6;
+        box-shadow: 0 0 20px rgba(114, 137, 218, 0.6), inset 0 0 10px rgba(114, 137, 218, 0.4);
     }
 }
 button {
@@ -117,17 +127,17 @@ button {
     cursor: pointer;
 }
 button:hover {
-    color: #339933;
-    border: 1px solid #339933;
-    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3), 0 0 10px rgba(0, 255, 0, 0.2), 0 0 15px rgba(0, 255, 0, 0.1), 0 2px 0 black;
+    color: var(--highlight-color);
+    border: 1px solid var(--highlight-color);
+    box-shadow: 0 0 5px rgba(114, 137, 218, 0.3), 0 0 10px rgba(114, 137, 218, 0.2), 0 0 15px rgba(114, 137, 218, 0.1), 0 2px 0 black;
 }
 .link {
     font-family: "Space Grotesk", sans-serif;
     margin-top: 25px;
-    color: #868686;
+    color: var(--input-color);
 }
 .link a {
-    color: #339933;
+    color: var(--highlight-color);
     text-decoration: none;
 }
 .link a:hover {
@@ -148,28 +158,24 @@ button:hover {
 }
 
 .popup-content {
-    background-color: #0a0e17;
+    background-color: var(--background-color);
     padding: 20px;
     border-radius: 5px;
     text-align: center;
-    border: 1px solid #339933;
+    border: 1px solid var(--highlight-color);
 }
 
 .popup p {
-    color: #c7c7c7;
+    color: var(--heading-color);
     margin-bottom: 15px;
 }
 
 .popup button {
-    background-color: #339933;
-    color: #0a0e17;
+    background-color: var(--highlight-color);
+    color: var(--background-color);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.popup button:hover {
-    background-color: #2a7d2a;
 }

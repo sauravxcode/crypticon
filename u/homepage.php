@@ -113,7 +113,10 @@ if (isset($_POST['logout'])) {
             noise = max(.0, noise - .5);
             noise *= (1. - length(vUv - .5));
 
-            color = normalize(vec3(.2, .5 + .4 * cos(3. * u_scroll_progress), .5 + .5 * sin(3. * u_scroll_progress)));
+          color = normalize(vec3(0.6, 0.1 + 0.2 * cos(3. * u_scroll_progress), 0.9 + 0.4 * sin(3. * u_scroll_progress)));
+
+
+
 
             color = color * noise;
 

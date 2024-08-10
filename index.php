@@ -82,14 +82,20 @@
                                             <div class="col-8">
                                                 <div class="controls__leftline d-flex justify-content-start align-items-center">
                                                     <!-- Menu Notify Trigger Start -->
-                                                    <a
+                                                    <!-- <a
                                                         id="notify-trigger-menu"
                                                         class="btn-round-mobile btn-notify btn-light-mobile hover-white hover-white-s"
                                                         href="#0"
+                                                    > -->
+                                                    <a
+
+                                                        class="btn-round-mobile btn-notify btn-light-mobile hover-white hover-white-s"
+                                                        href="https://drive.google.com/file/d/156c3kEA2vxE7kYKarT5m5dqSasMxymgz/view?usp=sharing"
+                                                        target="_blank"
                                                     >
                                                         <em></em>
                                                         <i class="fa-solid fa-download"></i>
-                                                        <span class="btn-caption">Notify Me</span>
+                                                        <span class="btn-caption">Rules</span>
                                                     </a>
                                                     <!-- Menu Notify Trigger End -->
 
@@ -243,13 +249,13 @@
 
                                 <!-- Notify Trigger Start -->
                                 <a
-                                    id="notify-trigger"
                                     class="btn-round-mobile btn-notify btn-light-outline notify-trigger hover-white hover-white-s"
-                                    href="#0"
+                                    href="https://drive.google.com/file/d/156c3kEA2vxE7kYKarT5m5dqSasMxymgz/view?usp=sharing"
+                                    target="_blank"
                                 >
                                     <em></em>
                                     <i class="fa-solid fa-download"></i>
-                                    <span class="btn-caption">Notify Me</span>
+                                    <span class="btn-caption">Rules</span>
                                 </a>
                                 <!-- Notify Trigger End -->
                             </div>
