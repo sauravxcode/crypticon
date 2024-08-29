@@ -15,17 +15,10 @@
             name="keywords"
             content="Crypticon, games, cryptic questions, prizes, students, interactive, educational, fun, challenge, competition"
         />
-        <meta name="author" content="Your Name or Your Organization" />
 
         <!-- Viewport Meta-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-        <!-- Template Favicon & Icons Start -->
-        <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
-        <link rel="manifest" href="img/favicon/manifest.webmanifest" />
-        <!-- Template Favicon & Icons End -->
 
         <!-- Facebook Metadata Start -->
         <meta property="og:image:height" content="1200" />
@@ -35,13 +28,15 @@
             property="og:description"
             content="Join Crypticon, where students solve cryptic questions, play games, and win prizes. Engage in a fun and challenging experience!"
         />
-        <!-- Facebook Metadata End -->
+        <!-- Facebook MetadataÂ EndÂ -->
 
         <!-- Template Styles Start -->
         <link rel="stylesheet" type="text/css" href="css/loaders/loader.css" />
         <link rel="stylesheet" type="text/css" href="css/plugins.css" />
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <!-- Template Styles End -->
+        
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
         <!-- Custom Browser Color Start -->
         <meta name="theme-color" content="#0e0d26" />
@@ -178,7 +173,7 @@
                                     <div class="row g-0">
                                         <div class="col-12">
                                             <p class="copyright">
-                                                By <a href="https://github.com/chinxcode" target="_blank">Sachin</a> & <a href="https://github.com/sauravxcode" target="_blank">Saurav</a>
+                                                Made By <a href="https://www.linkedin.com/in/sachin11175" target="_blank">Sachin</a> & <a href="https://www.linkedin.com/in/isaurav" target="_blank">Saurav</a>
                                             </p>
                                         </div>
                                     </div>
@@ -207,7 +202,7 @@
         <header id="header" class="header">
             <!-- Logo Start -->
             <div class="header__logo">
-                <img src="img/logo.svg" alt="Marvio - Coming Soon & Portfolio Template" />
+                <img src="img/logo.svg" alt="Crypticon 2024" />
             </div>
             <!-- Logo End -->
 
@@ -222,7 +217,7 @@
                                 <div class="socials-desktop">
                                     <ul>
                                         <li>
-                                            <a href="https://www.instagram.com/crypticon_india" target="_blank">
+                                            <a href="https://www.instagram.com/crypticon_maps" target="_blank">
                                                 <i class="fa-brands fa-instagram"></i>
                                             </a>
                                         </li>
@@ -341,7 +336,7 @@
                                 <a href="login.php" class="btn-bottom">
                                     <span class="circle">
                                         <em></em>
-                                        <i>🡭</i>
+                                        <i>🡭­</i>
                                     </span>
                                     <span class="caption">LOGIN NOW!</span>
                                 </a>
@@ -362,7 +357,7 @@
                         <div class="col-12 socials-mobile">
                             <ul>
                                 <li>
-                                    <a href="https://www.instagram.com/crypticon_india" target="_blank">
+                                    <a href="https://www.instagram.com/crypticon_maps" target="_blank">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </li>
@@ -413,7 +408,7 @@
                                         <li>1. Join the designated Discord server for updates and access.</li>
                                         <li>2. Access the competition portal via a shared link.</li>
                                         <li>3. Players log in using school-specific credentials; competition begins at 12 AM sharp.</li>
-                                        <li>4. Progress through levels by answering cryptic questions, earning 500 points per level.</li>
+                                        <li>4. Progress through levels by answering cryptic questions, earning 200 points per level.</li>
                                         <li>5. Leads will be provided periodically, with moderators offering hints as needed.</li>
                                         <li>
                                             6. Competition lasts 24 hours, with a live leaderboard showing real-time scores and rankings.
@@ -436,28 +431,13 @@
                                             5. Using unfair means results in immediate disqualification; internet use is allowed for solving
                                             riddles.
                                         </li>
-                                        <li>6. Top 5 teams qualify for the OFFLINE round; teams must have 2-3 members to qualify.</li>
                                     </ol>
                                 </div>
                             </div>
                             <!-- Section Container - Section Title End -->
 
                             <!-- Section Container - Showreel Start -->
-                            <div class="inner__container">
-                                <div class="content-block">
-                                    <div class="fullwidth-container">
-                                        <div class="showreel showreel-image-1 block-rounded-l">
-                                            <div class="showreel__button">
-                                                <!-- video trigger -->
-                                                <a href="https://vimeo.com/65036292" id="inner-video-trigger" class="inner-video-trigger">
-                                                    <em></em>
-                                                    <i class="fa-solid fa-play"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <!-- Section Container - Showreel End -->
                         </div>
                     </div>
@@ -474,300 +454,6 @@
             </div>
         </section>
         <!-- About Section End -->
-
-        <!-- Portfolio Section Start -->
-        <section id="portfolio" class="inner portfolio">
-            <div class="container-fluid p-0 fullheight">
-                <div class="row g-0 fullheight">
-                    <!-- Portfolio Section Content Start -->
-                    <div class="col-12 col-xl-8 inner__content">
-                        <!-- desktop shadow -->
-                        <div class="desktop-shadow"></div>
-                        <!-- inner section blocks -->
-                        <div class="inner__blocks">
-                            <!-- Section Container - Section Title Start -->
-                            <div class="inner__container">
-                                <div class="content-block">
-                                    <span class="section__subtitle">Crypticon 2024</span>
-                                    <h2>Leaderboard</h2>
-                                </div>
-                            </div>
-                            <!-- Section Container - Section Title End -->
-
-                            <!-- Section Container - Gallery Start -->
-                            <div class="inner__container">
-                                <!-- <iframe src="http://localhost:3000/u/leaderboard.php" frameborder="0"></iframe> -->
-                            </div>
-                            <!-- Section Container - Gallery End -->
-                        </div>
-                    </div>
-                    <!-- Portfolio Section Content End -->
-
-                    <!-- Portfolio Section Media Start -->
-                    <div class="col-12 col-xl-4 inner__media">
-                        <!-- Portfolio Section Image Background Start -->
-                        <div class="image media-image-portfolio"></div>
-                        <!-- Portfolio Section Image Background End -->
-                    </div>
-                    <!-- Portfolio Section Media End -->
-                </div>
-            </div>
-        </section>
-        <!-- Portfolio Section End -->
-
-        <!-- Contact Section Start -->
-        <section id="contact" class="inner contact">
-            <div class="container-fluid p-0 fullheight">
-                <div class="row g-0 fullheight">
-                    <!-- Contact Section Content Start -->
-                    <div class="col-12 col-xl-8 inner__content">
-                        <!-- desktop shadow -->
-                        <div class="desktop-shadow"></div>
-                        <!-- inner section blocks -->
-                        <div class="inner__blocks">
-                            <!-- Section Container - Section Title Start -->
-                            <div class="inner__container">
-                                <div class="content-block">
-                                    <span class="section__subtitle">Contact</span>
-                                    <h2>Let's get in touch.</h2>
-                                    <p class="section__text">
-                                        Have questions, feedback, or inquiries? Feel free to reach out to us! Our team is here to assist you
-                                        with any queries you may have about our competitions, participation guidelines, or anything else
-                                        related to Crypticon 2024. We value your input and look forward to hearing from you.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Section Container - Section Title End -->
-
-                            <!-- Section Container - Contact Data Start -->
-                            <div class="inner__container">
-                                <div class="content-block grid-block">
-                                    <div class="container-fluid px-4">
-                                        <div class="row gx-5 align-items-stretch">
-                                            <!-- contact data single item -->
-                                            <div class="col-12 col-md-6 col-lg-4 contactdata">
-                                                <div class="contactdata__item contactdata-item-1 block-rounded-l">
-                                                    <div class="contactdata__icon">
-                                                        <img src="https://dummyimage.com/100x100/dedede/636363" alt="Marvio Contact Icon" />
-                                                    </div>
-                                                    <h5 class="contactdata__title">Location</h5>
-                                                    <div class="contactdata__descr d-flex align-items-start">
-                                                        <div class="contactdata__icon">
-                                                            <i class="fa-solid fa-location-crosshairs"></i>
-                                                        </div>
-                                                        <div class="contactdata__text">
-                                                            <p>
-                                                                <a
-                                                                    class="contact-link"
-                                                                    href="https://goo.gl/maps/nWXKpGaDPuyH6gxRA"
-                                                                    target="_blank"
-                                                                    >11 West 53 Street,<br />New York, NY 10019</a
-                                                                >
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="contactdata__descr d-flex align-items-start">
-                                                        <div class="contactdata__icon">
-                                                            <i class="fa-solid fa-location-crosshairs"></i>
-                                                        </div>
-                                                        <div class="contactdata__text">
-                                                            <p>
-                                                                <a
-                                                                    class="contact-link"
-                                                                    href="https://goo.gl/maps/xap5o3MZBuC6DFHz8"
-                                                                    target="_blank"
-                                                                    >3400 Broadway,<br />Oakland, CA 94611</a
-                                                                >
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- contact data single item -->
-                                            <div class="col-12 col-md-6 col-lg-4 contactdata">
-                                                <div class="contactdata__item contactdata-item-2 block-rounded-l">
-                                                    <div class="contactdata__icon">
-                                                        <img src="https://dummyimage.com/100x100/dedede/636363" alt="Marvio Contact Icon" />
-                                                    </div>
-                                                    <h5 class="contactdata__title">Follow us</h5>
-                                                    <div class="contactdata__descr d-flex align-items-start">
-                                                        <ul class="contactdata__socials">
-                                                            <li>
-                                                                <i class="fa-brands fa-facebook"></i>
-                                                                <a class="contact-link" href="https://www.facebook.com/" target="_blank"
-                                                                    >Facebook</a
-                                                                >
-                                                            </li>
-                                                            <li>
-                                                                <i class="fa-brands fa-instagram"></i>
-                                                                <a class="contact-link" href="https://www.instagram.com/" target="_blank"
-                                                                    >Instagram</a
-                                                                >
-                                                            </li>
-                                                            <li>
-                                                                <i class="fa-brands fa-twitter"></i>
-                                                                <a class="contact-link" href="https://twitter.com/" target="_blank"
-                                                                    >Twitter</a
-                                                                >
-                                                            </li>
-                                                            <li>
-                                                                <i class="fa-brands fa-pinterest"></i>
-                                                                <a class="contact-link" href="https://pinterest.com/" target="_blank"
-                                                                    >Pinterest</a
-                                                                >
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- contact data single item -->
-                                            <div class="col-12 col-md-6 col-lg-4 contactdata">
-                                                <div class="contactdata__item contactdata-item-3 block-rounded-l">
-                                                    <div class="contactdata__icon">
-                                                        <img src="https://dummyimage.com/100x100/dedede/636363" alt="Marvio Contact Icon" />
-                                                    </div>
-                                                    <h5 class="contactdata__title">Contact</h5>
-                                                    <div class="contactdata__descr d-flex align-items-start">
-                                                        <div class="contactdata__icon">
-                                                            <i class="fa-solid fa-phone"></i>
-                                                        </div>
-                                                        <div class="contactdata__text">
-                                                            <p>
-                                                                <a class="contact-link" href="tel:+12127089400">+1 212-708-9400</a>
-                                                                <br />
-                                                                <a class="contact-link" href="tel:+15104570211">+1 510-457-0211</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="contactdata__descr d-flex align-items-start">
-                                                        <div class="contactdata__icon">
-                                                            <i class="fa-solid fa-envelope"></i>
-                                                        </div>
-                                                        <div class="contactdata__text">
-                                                            <a
-                                                                class="contact-link"
-                                                                href="mailto:example@example.com?subject=Message%20from%20your%20site"
-                                                                >hello@marvio.com</a
-                                                            >
-                                                            <br />
-                                                            <a
-                                                                class="contact-link"
-                                                                href="mailto:example@example.com?subject=Message%20from%20your%20site"
-                                                                >support@marvio.com</a
-                                                            >
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Section Container - Contact Data End -->
-
-                            <!-- Section Container - Contact Form Start -->
-                            <div class="inner__container">
-                                <div class="content-block">
-                                    <h3>Just say hello!</h3>
-                                    <p class="block__text">
-                                        Want to know more about us, tell us about your project or just to say hello? Drop me a line and I'll
-                                        get back as soon as possible.
-                                    </p>
-                                </div>
-                                <div class="content-block grid-block">
-                                    <div class="form-container">
-                                        <!-- Contact Form Reply Group Start -->
-                                        <div class="reply-group">
-                                            <i class="fa-solid fa-circle-check reply-group__icon"></i>
-                                            <p class="reply-group__title light">Done!</p>
-                                            <span class="reply-group__text light"
-                                                >Thanks for your message. We will get back as soon as possible</span
-                                            >
-                                        </div>
-                                        <!-- Contact Form Reply Group End -->
-
-                                        <!-- Contact Form Start -->
-                                        <form class="form form-light contact-form" id="contact-form">
-                                            <!-- Hidden Required Fields -->
-                                            <input type="hidden" name="project_name" value="Marvio - Coming Soon & Portfolio Template" />
-                                            <input type="hidden" name="admin_email" value="support@mixdesign.club" />
-                                            <input type="hidden" name="form_subject" value="Contact Form Message" />
-                                            <!-- END Hidden Required Fields-->
-                                            <div class="container-fluid px-4">
-                                                <div class="row gx-5">
-                                                    <div class="col-12 col-md-6">
-                                                        <input
-                                                            class="block-rounded-s"
-                                                            type="text"
-                                                            name="Name"
-                                                            placeholder="Your Name*"
-                                                            required
-                                                        />
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <input
-                                                            class="block-rounded-s"
-                                                            type="text"
-                                                            name="Company"
-                                                            placeholder="Company Name"
-                                                        />
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <input
-                                                            class="block-rounded-s"
-                                                            type="email"
-                                                            name="E-mail"
-                                                            placeholder="Email Adress*"
-                                                            required
-                                                        />
-                                                    </div>
-                                                    <div class="col-12 col-md-6">
-                                                        <input
-                                                            class="block-rounded-s"
-                                                            type="tel"
-                                                            name="Phone"
-                                                            placeholder="Phone Number*"
-                                                            required
-                                                        />
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <textarea
-                                                            class="block-rounded-s margin-s"
-                                                            name="Message"
-                                                            placeholder="A Few Words*"
-                                                            required
-                                                        ></textarea>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <span class="inputs-description">*Required fields</span>
-                                                        <button class="btn btn-l btn-light hover-gradient hover-gradient-l" type="submit">
-                                                            <em></em>
-                                                            <span class="btn-caption">Submit</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <!-- Contact Form End  -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Section Container - Contact Form End -->
-                        </div>
-                    </div>
-                    <!-- Contact Section Content End -->
-
-                    <!-- Contact Section Media Start -->
-                    <div class="col-12 col-xl-4 inner__media">
-                        <!-- Contact Section Image Background Start -->
-                        <div class="image media-image-contact"></div>
-                        <!-- Contact Section Image Background End -->
-                    </div>
-                    <!-- Contact Section Media End -->
-                </div>
-            </div>
-        </section>
-        <!-- Contact Section End -->
 
         <!-- Notify Popup Start -->
         <div id="notify" class="popup notify">
